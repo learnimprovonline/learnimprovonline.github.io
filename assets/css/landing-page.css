@@ -1613,7 +1613,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
     }
 }
 
-@media (max-width: 767px){
+@media (max-width: 768px){
   .fixed-plugin{
     position: absolute;
   }
@@ -1641,11 +1641,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
   }
   .landing-page .parallax {
     height: 550px;
-  }
-  .landing-page .parallax .parallax-background img {
-    width: auto;
-    height: 100%;
-  }
+  }  
   .landing-page .parallax .description{
     margin-top: 65px;  }
   .landing-page .parallax .buttons{
@@ -1680,3 +1676,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
         padding-top: 10px;
     }
 }
+
+@media (max-width: 945px){
+  .landing-page .parallax .parallax-background img {
+    width: auto;
+    height: 100%;
+  }
+}
+
+
+
