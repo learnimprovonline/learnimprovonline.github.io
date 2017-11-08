@@ -1,8 +1,13 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
-  "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "learn-improv-online-site",
+  "description": "Site for LeanImprovOnline.com",
+  "version": "1.0.0-alpha",
+  "author": "Luke Dodge <luke@learnimprovonline.com>",
+  "homepage": "www.learnimprovonline.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lrdodge/learnimprovonline.github.io"
+  },
   "dependencies": {
     "gatsby": "^1.9.99",
     "gatsby-link": "^1.6.24",
