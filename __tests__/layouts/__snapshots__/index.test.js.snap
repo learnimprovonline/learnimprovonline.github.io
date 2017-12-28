@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout renders correctly 1`] = `
+<div>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+    meta={
+      Array [
+        Object {
+          "content": "Free improv warm-ups and exercises with high-quality written descriptions, animated instructionals, and video examples. Start learning now!",
+          "name": "description",
+        },
+        Object {
+          "content": "improv, learn improv, learn improv online",
+          "name": "keywords",
+        },
+      ]
+    }
+    title="Learn Improv Online"
+  />
+  <Header>
+    Learn Improv Online
+  </Header>
+  <div
+    style={
+      Object {
+        "margin": "0 auto",
+        "maxWidth": 960,
+        "padding": "0px 1.0875rem 1.45rem",
+        "paddingTop": 0,
+      }
+    }
+  >
+    <div>
+      Children
+    </div>
+  </div>
+</div>
+`;
