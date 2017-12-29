@@ -24,6 +24,7 @@ test('Header title displays the site name', () => {
 });
 
 test('Header renders correctly', () => {
-  let tree = toJson(header);
+  const tree = toJson(header);
+
   expect(tree).toMatchSnapshot();
 });

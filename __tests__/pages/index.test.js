@@ -33,6 +33,7 @@ test('Index Page contains a "Go to Activities" link', () => {
 });
 
 test('Index Page renders correctly', () => {
-    let tree = toJson(indexPage);
+    const tree = toJson(indexPage);
+    
     expect(tree).toMatchSnapshot();
 });
