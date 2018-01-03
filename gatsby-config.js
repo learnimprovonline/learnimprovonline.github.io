@@ -1,6 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: "Learn Improv Online",
+    siteUrl: `https://www.learnimpovonline.com`
   },
-  plugins: [`gatsby-plugin-react-helmet`],
+  plugins: [
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sitemap"
+  ],
 }
