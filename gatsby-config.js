@@ -14,7 +14,19 @@ module.exports = {
         start_url: "/",
         background_color: "#f7f0eb",
         theme_color: "#a2466c",
-        display: "minimal-ui"
+        display: "standalone",
+        icons: [
+          {
+            src: "/logos/logo-192.png",
+            sizes: "192x192",
+            type: "image/png"
+          },
+          {
+            src: "/logos/logo-512.png",
+            sizes: "512x512",
+            type: "image/png"
+          }
+        ]
       },
     },
     "gatsby-plugin-offline",
