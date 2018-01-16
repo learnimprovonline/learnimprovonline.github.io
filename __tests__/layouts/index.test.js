@@ -5,13 +5,20 @@ import TemplateWrapper from '../../src/layouts'
 import Helmet from 'react-helmet'
 import Header from '../../src/components/header'
 
-const siteTitle = 'Learn Improv Online'
-const siteDescription = 'Free improv warm-ups and exercises with high-quality written descriptions, animated instructionals, and video examples. Start learning now!'
-const siteKeywords = 'improv, learn improv, learn improv online'
+const site = {
+  siteMetadata: {
+    title: 'Learn Improv Online',
+    description: 'Free improv warm-ups and exercises with high-quality written descriptions, animated instructionals, and video examples. Start learning now!',
+    keywords: 'improv, learn improv, learn improv online'
+  }
+}
+
+const mockChildren = jest.fn()
+mockChildren.mockReturnValue(<div>Children</div>)
 
 const layout = shallow(
   <TemplateWrapper>
-    {() => { return (<div>Children</div>) }}
+    {mockChildren}
   </TemplateWrapper>
 );
 const helmet = layout.find(Helmet);
@@ -19,7 +26,7 @@ const helmet = layout.find(Helmet);
 test('Layout contains a Helmet with the site title', () => {
   const helmetTitleText = helmet.prop('title');
 
-  expect(helmetTitleText).toBe(siteTitle);
+  expect(helmetTitleText).toBe(site.siteMetadata.title);
 });
 
 test('Layout contains a Helmet with the correct meta data', () => {
@@ -29,16 +36,20 @@ test('Layout contains a Helmet with the correct meta data', () => {
   const helmetKeywords = helmetMeta.find(x => x.name === 'keywords');
   const helmetKeywordsText = helmetKeywords.content;
 
-  expect(helmetDescriptionText).toBe(siteDescription);
-  expect(helmetKeywordsText).toBe(siteKeywords);
+  expect(helmetDescriptionText).toBe(site.siteMetadata.description);
+  expect(helmetKeywordsText).toBe(site.siteMetadata.keywords);
 });
 
 test('Layout contains a Header with the site title', () => {
   const header = layout.find(Header);
   const headerText = header.children().text();
 
-  expect(headerText).toBe(siteTitle);
+  expect(headerText).toBe(site.siteMetadata.title);
 });
+
+test('Layout renders children', () => {
+  expect(mockChildren.mock.calls.length).toBe(1);
+})
 
 test('Layout renders correctly', () => {
   let tree = toJson(layout);

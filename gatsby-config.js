@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: "Learn Improv Online",
-    siteUrl: "https://www.learnimpovonline.com"
+    siteUrl: "https://www.learnimpovonline.com",
+    description: "Free improv warm-ups and exercises with high-quality written descriptions, animated instructionals, and video examples. Start learning now!",
+    keywords: "improv, learn improv, learn improv online"
   },
   plugins: [
     "gatsby-plugin-react-helmet",
