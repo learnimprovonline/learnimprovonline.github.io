@@ -14,13 +14,13 @@ test('Header link goes to the main page', () => {
   const rootDestination = "/";
   const linkDestination = link.prop('to');
 
-  expect(linkDestination).toBe(rootDestination);
+  expect(linkDestination).toEqual(rootDestination);
 });
 
 test('Header title displays the site name', () => {  
   const title = link.children().text();
 
-  expect(title).toBe(siteName);
+  expect(title).toEqual(siteName);
 });
 
 test('Header renders correctly', () => {

@@ -17,19 +17,19 @@ test('Activites Page contains a page heading with the page title', () => {
   const pageHeading = activitiesPage.find('h1');
   const pageHeadingText = pageHeading.children().text();
 
-  expect(pageHeadingText).toBe(pageTitle);
+  expect(pageHeadingText).toEqual(pageTitle);
 });
 
 test('Activites Page contains a link to the Index Page', () => {
   const indexLinkDestination = indexLink.prop('to');
 
-  expect(indexLinkDestination).toBe(indexPageDestination);
+  expect(indexLinkDestination).toEqual(indexPageDestination);
 });
 
 test('Activites Page contains a "Go to Activities" link', () => {
   const indexLinkText = indexLink.children().text();
 
-  expect(indexLinkText).toBe('Go back to the homepage');
+  expect(indexLinkText).toEqual('Go back to the homepage');
 });
 
 test('Activites Page renders correctly', () => {

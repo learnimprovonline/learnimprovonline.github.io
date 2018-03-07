@@ -26,7 +26,7 @@ const helmet = layout.find(Helmet);
 test('Layout contains a Helmet with the site title', () => {
   const helmetTitleText = helmet.prop('title');
 
-  expect(helmetTitleText).toBe(site.siteMetadata.title);
+  expect(helmetTitleText).toEqual(site.siteMetadata.title);
 });
 
 test('Layout contains a Helmet with the correct meta data', () => {
@@ -36,19 +36,19 @@ test('Layout contains a Helmet with the correct meta data', () => {
   const helmetKeywords = helmetMeta.find(x => x.name === 'keywords');
   const helmetKeywordsText = helmetKeywords.content;
 
-  expect(helmetDescriptionText).toBe(site.siteMetadata.description);
-  expect(helmetKeywordsText).toBe(site.siteMetadata.keywords);
+  expect(helmetDescriptionText).toEqual(site.siteMetadata.description);
+  expect(helmetKeywordsText).toEqual(site.siteMetadata.keywords);
 });
 
 test('Layout contains a Header with the site title', () => {
   const header = layout.find(Header);
   const headerText = header.children().text();
 
-  expect(headerText).toBe(site.siteMetadata.title);
+  expect(headerText).toEqual(site.siteMetadata.title);
 });
 
 test('Layout renders children', () => {
-  expect(mockChildren.mock.calls.length).toBe(1);
+  expect(mockChildren.mock.calls.length).toEqual(1);
 })
 
 test('Layout renders correctly', () => {
