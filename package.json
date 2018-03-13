@@ -9,7 +9,7 @@
     "url": "https://github.com/lrdodge/learnimprovonline.github.io"
   },
   "dependencies": {
-    "gatsby": "^1.9.99",
+    "gatsby": "^1.9.232",
     "gatsby-link": "^1.6.24",
     "gatsby-plugin-manifest": "^1.0.12",
     "gatsby-plugin-offline": "^1.0.12",
@@ -26,6 +26,7 @@
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "test": "jest",
+    "test-watch": "jest --watchAll",
     "snapshots": "jest --updateSnapshot"
   },
   "jest": {
@@ -49,7 +50,7 @@
     "enzyme-to-json": "^3.3.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^21.2.1",
-    "prettier": "^1.7.4",
+    "prettier": "^1.11.1",
     "react-test-renderer": "^15.0.0"
   }
 }
