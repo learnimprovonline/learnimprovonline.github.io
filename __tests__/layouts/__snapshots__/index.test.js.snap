@@ -8,19 +8,19 @@ exports[`Layout renders correctly 1`] = `
     meta={
       Array [
         Object {
-          "content": "Free improv warm-ups and exercises with high-quality written descriptions, animated instructionals, and video examples. Start learning now!",
+          "content": "Site Description",
           "name": "description",
         },
         Object {
-          "content": "improv, learn improv, learn improv online",
+          "content": "one, two, three",
           "name": "keywords",
         },
       ]
     }
-    title="Learn Improv Online"
+    title="Site Title"
   />
   <Header>
-    Learn Improv Online
+    Site Title
   </Header>
   <div
     style={

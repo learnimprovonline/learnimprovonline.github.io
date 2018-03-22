@@ -1,22 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import Header from '../components/header'
+import { graphql } from 'graphql'
 
 import './index.css'
 
-const TemplateWrapper = ({ children }) => (
+const TemplateWrapper = ({ children, data }) => (
   <div>
     <Helmet
-      title="Learn Improv Online"
+      title={data.site.siteMetadata.title}
       meta={[
-        { name: 'description', content: 'Free improv warm-ups and exercises with high-quality written descriptions, animated instructionals, and video examples. Start learning now!' },
-        { name: 'keywords', content: 'improv, learn improv, learn improv online' },
+        { name: 'description', content: data.site.siteMetadata.description },
+        { name: 'keywords', content: data.site.siteMetadata.keywords },
       ]}
     />
     <Header>
-      Learn Improv Online
+      {data.site.siteMetadata.title}
     </Header>
     <div
       style={{
@@ -29,10 +29,23 @@ const TemplateWrapper = ({ children }) => (
       {children()}
     </div>
   </div>
-);
+)
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func,
+  data: PropTypes.object,
 }
 
 export default TemplateWrapper
+
+export const query = graphql`
+  query HeaderQuery {
+    site {
+      siteMetadata {
+        title,
+        description,
+        keywords
+      }
+    }
+  }
+`
