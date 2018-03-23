@@ -1,39 +1,39 @@
-import React from 'react';
+import React from 'react'
 import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
-import ActivitiesPage from '../../src/pages/activities'
 import Link from 'gatsby-link'
+import ActivitiesPage from '../../src/pages/activities'
 
 const pageTitle = 'Activities'
 const indexPageDestination = '/'
 
-const activitiesPage = shallow(
+const ActivitiesPageDom = shallow(
   <ActivitiesPage />
-);
+)
 
-const indexLink = activitiesPage.find(Link);
+const indexLink = ActivitiesPageDom.find(Link)
 
 test('Activites Page contains a page heading with the page title', () => {
-  const pageHeading = activitiesPage.find('h1');
-  const pageHeadingText = pageHeading.children().text();
+  const pageHeading = ActivitiesPageDom.find('h1')
+  const pageHeadingText = pageHeading.children().text()
 
-  expect(pageHeadingText).toEqual(pageTitle);
+  expect(pageHeadingText).toEqual(pageTitle)
 });
 
 test('Activites Page contains a link to the Index Page', () => {
-  const indexLinkDestination = indexLink.prop('to');
+  const indexLinkDestination = indexLink.prop('to')
 
-  expect(indexLinkDestination).toEqual(indexPageDestination);
+  expect(indexLinkDestination).toEqual(indexPageDestination)
 });
 
 test('Activites Page contains a "Go to Activities" link', () => {
-  const indexLinkText = indexLink.children().text();
+  const indexLinkText = indexLink.children().text()
 
-  expect(indexLinkText).toEqual('Go back to the homepage');
-});
+  expect(indexLinkText).toEqual('Go to Home')
+})
 
 test('Activites Page renders correctly', () => {
-  const tree = toJson(activitiesPage);
-  
-  expect(tree).toMatchSnapshot();
-});
+  const tree = toJson(ActivitiesPageDom)
+
+  expect(tree).toMatchSnapshot()
+})

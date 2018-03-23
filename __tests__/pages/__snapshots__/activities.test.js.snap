@@ -11,7 +11,7 @@ exports[`Activites Page renders correctly 1`] = `
   <GatsbyLink
     to="/"
   >
-    Go back to the homepage
+    Go to Home
   </GatsbyLink>
 </div>
 `;

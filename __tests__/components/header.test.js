@@ -1,30 +1,30 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import Header from '../../src/components/header.js'
-import Link from 'gatsby-link'
 import toJson from 'enzyme-to-json'
+import Link from 'gatsby-link'
+import Header from '../../src/components/header.js'
 
-const siteName = 'Learn Improv Online';
-const header = shallow(
+const siteName = 'Site Name'
+const HeaderDom = shallow(
   <Header>{siteName}</Header>
-);
-const link = header.find(Link);
+)
+const link = HeaderDom.find(Link)
 
 test('Header link goes to the main page', () => {
-  const rootDestination = "/";
-  const linkDestination = link.prop('to');
+  const rootDestination = "/"
+  const linkDestination = link.prop('to')
 
-  expect(linkDestination).toEqual(rootDestination);
-});
+  expect(linkDestination).toEqual(rootDestination)
+})
 
-test('Header title displays the site name', () => {  
-  const title = link.children().text();
+test('Header title displays the site name', () => {
+  const linkText = link.children().text()
 
-  expect(title).toEqual(siteName);
-});
+  expect(linkText).toEqual(siteName)
+})
 
 test('Header renders correctly', () => {
-  const tree = toJson(header);
+  const tree = toJson(HeaderDom)
 
-  expect(tree).toMatchSnapshot();
-});
+  expect(tree).toMatchSnapshot()
+})

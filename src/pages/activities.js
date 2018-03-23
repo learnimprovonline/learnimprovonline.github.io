@@ -8,7 +8,7 @@ const ActivitesPage = () => (
       Learn improv warm-ups and exercises through a variety of written descriptions, animated instructionals, and video examples. 
       Empowering you and your team the ability to take yourself to the next level.
     </p>
-    <Link to="/">Go back to the homepage</Link>
+    <Link to="/">Go to Home</Link>
   </div>
 )
 

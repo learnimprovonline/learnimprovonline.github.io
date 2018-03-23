@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-const Header = ({children}) => (
+const Header = ({ children }) => (
   <div
     style={{
       background: 'rebeccapurple',

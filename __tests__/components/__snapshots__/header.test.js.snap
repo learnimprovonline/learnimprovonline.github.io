@@ -34,7 +34,7 @@ exports[`Header renders correctly 1`] = `
         }
         to="/"
       >
-        Learn Improv Online
+        Site Name
       </GatsbyLink>
     </h1>
   </div>
