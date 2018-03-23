@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Index Page renders correctly 1`] = `
+exports[`Index Page renders itself 1`] = `
 <div>
   <h1>
     Early Access Alpha

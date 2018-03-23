@@ -4,36 +4,47 @@ import toJson from 'enzyme-to-json'
 import Link from 'gatsby-link'
 import ActivitiesPage from '../../src/pages/activities'
 
-const pageTitle = 'Activities'
-const indexPageDestination = '/'
-
 const ActivitiesPageDom = shallow(
   <ActivitiesPage />
 )
 
-const indexLink = ActivitiesPageDom.find(Link)
+describe('Activities Page', () => {
 
-test('Activites Page contains a page heading with the page title', () => {
-  const pageHeading = ActivitiesPageDom.find('h1')
-  const pageHeadingText = pageHeading.children().text()
+  describe('Page Heading', () => {
+    test('display text is "Activites"', () => {
+      const pageTitle = 'Activities'
+      const pageHeading = ActivitiesPageDom.find('h1')
+      const pageHeadingText = pageHeading.children().text()
 
-  expect(pageHeadingText).toEqual(pageTitle)
-});
+      expect(pageHeadingText).toEqual(pageTitle)
+    })
+  })
 
-test('Activites Page contains a link to the Index Page', () => {
-  const indexLinkDestination = indexLink.prop('to')
+  describe('Index Link', () => {
+    const indexLink = ActivitiesPageDom.find(Link)
 
-  expect(indexLinkDestination).toEqual(indexPageDestination)
-});
+    test('display text is "Go to Home" link', () => {
+      const indexLinkText = indexLink.children().text()
+    
+      expect(indexLinkText).toEqual('Go to Home')
+    })
 
-test('Activites Page contains a "Go to Activities" link', () => {
-  const indexLinkText = indexLink.children().text()
+    test('points to the Index Page', () => {
+      const indexPageDestination = '/'
+      const indexLinkDestination = indexLink.prop('to')
+    
+      expect(indexLinkDestination).toEqual(indexPageDestination)
+    })
+  })
 
-  expect(indexLinkText).toEqual('Go to Home')
+  test('renders itself', () => {
+    const tree = toJson(ActivitiesPageDom)
+  
+    expect(tree).toMatchSnapshot()
+  })
 })
 
-test('Activites Page renders correctly', () => {
-  const tree = toJson(ActivitiesPageDom)
 
-  expect(tree).toMatchSnapshot()
-})
+
+
+

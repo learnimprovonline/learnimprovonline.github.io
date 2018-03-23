@@ -25,40 +25,56 @@ const LayoutDom = shallow(
 )
 const helmet = LayoutDom.find(Helmet)
 
-test('Layout contains a Helmet with the site title', () => {
-  const helmetTitleText = helmet.prop('title')
-  const siteTitle = mockData.site.siteMetadata.title
+describe('Index Layout', () => {
 
-  expect(helmetTitleText).toEqual(siteTitle)
-})
+  describe('Helmet', () => {
 
-test('Layout contains a Helmet with the correct meta data', () => {
-  const helmetMeta = helmet.prop('meta')
-  const helmetDescription = helmetMeta.find(x => x.name === 'description')
-  const helmetDescriptionText = helmetDescription.content
-  const helmetKeywords = helmetMeta.find(x => x.name === 'keywords')
-  const helmetKeywordsText = helmetKeywords.content
-  const siteDescription = mockData.site.siteMetadata.description
-  const siteKeywords = mockData.site.siteMetadata.keywords
+    test('title is populated from site data', () => {
+      const helmetTitleText = helmet.prop('title')
+      const siteTitle = mockData.site.siteMetadata.title
 
-  expect(helmetDescriptionText).toEqual(siteDescription)
-  expect(helmetKeywordsText).toEqual(siteKeywords)
-})
+      expect(helmetTitleText).toEqual(siteTitle)
+    })
 
-test('Layout contains a Header with the site title', () => {
-  const header = LayoutDom.find(Header)
-  const headerText = header.children().text()
-  const siteTitle = mockData.site.siteMetadata.title
+    describe('Meta', () => {
+      const helmetMeta = helmet.prop('meta')
 
-  expect(headerText).toEqual(siteTitle)
-})
+      test('description is populated from site data', () => {
+        const helmetDescription = helmetMeta.find(x => x.name === 'description')
+        const helmetDescriptionText = helmetDescription.content
+        const siteDescription = mockData.site.siteMetadata.description
 
-test('Layout renders children', () => {
-  expect(mockChildren.mock.calls.length).toEqual(1);
-})
+        expect(helmetDescriptionText).toEqual(siteDescription)
+      })
 
-test('Layout renders correctly', () => {
-  const tree = toJson(LayoutDom)
+      test('keywords is populated from site data', () => {
+        const helmetKeywords = helmetMeta.find(x => x.name === 'keywords')
+        const helmetKeywordsText = helmetKeywords.content
+        const siteKeywords = mockData.site.siteMetadata.keywords
 
-  expect(tree).toMatchSnapshot()
+        expect(helmetKeywordsText).toEqual(siteKeywords)
+      })
+    })
+
+  })
+
+  describe('Header', () => {
+    test('Layout contains a Header with the site title', () => {
+      const header = LayoutDom.find(Header)
+      const headerText = header.children().text()
+      const siteTitle = mockData.site.siteMetadata.title
+
+      expect(headerText).toEqual(siteTitle)
+    })
+  })
+
+  test('renders children', () => {
+    expect(mockChildren.mock.calls.length).toEqual(1);
+  })
+
+  test('renders itself', () => {
+    const tree = toJson(LayoutDom)
+
+    expect(tree).toMatchSnapshot()
+  })
 })

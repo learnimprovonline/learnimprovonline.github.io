@@ -4,27 +4,30 @@ import toJson from 'enzyme-to-json'
 import Link from 'gatsby-link'
 import Header from '../../src/components/header.js'
 
-const siteName = 'Site Name'
 const HeaderDom = shallow(
-  <Header>{siteName}</Header>
+  <Header>{'Site Name'}</Header>
 )
 const link = HeaderDom.find(Link)
 
-test('Header link goes to the main page', () => {
-  const rootDestination = "/"
-  const linkDestination = link.prop('to')
+describe('Header', () => {
 
-  expect(linkDestination).toEqual(rootDestination)
+  test('link goes to the main page', () => {
+    const rootDestination = "/"
+    const linkDestination = link.prop('to')
+  
+    expect(linkDestination).toEqual(rootDestination)
+  })
+  
+  test('display text is passed in as children', () => {
+    const linkText = link.children().text()
+  
+    expect(linkText).toEqual('Site Name')
+  })
+  
+  test('renders itself correctly', () => {
+    const tree = toJson(HeaderDom)
+  
+    expect(tree).toMatchSnapshot()
+  })
 })
 
-test('Header title displays the site name', () => {
-  const linkText = link.children().text()
-
-  expect(linkText).toEqual(siteName)
-})
-
-test('Header renders correctly', () => {
-  const tree = toJson(HeaderDom)
-
-  expect(tree).toMatchSnapshot()
-})

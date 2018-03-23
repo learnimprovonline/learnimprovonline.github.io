@@ -4,36 +4,42 @@ import toJson from 'enzyme-to-json'
 import Link from 'gatsby-link'
 import IndexPage from '../../src/pages/index.js'
 
-const activitiesPageDestination = '/activities/'
-const pageTitle = 'Early Access Alpha'
-
 const IndexPageDom = shallow(
     <IndexPage />
 )
 
-const activitiesLink = IndexPageDom.find(Link)
+describe('Index Page', () => {
 
-test('Index Page contains a page heading with the page title', () => {
-    const pageHeading = IndexPageDom.find('h1')
-    const pageHeadingText = pageHeading.children().text()
+    describe('Page Heading', () => {
+        test('display text is "Early Access Alpha"', () => {
+            const pageTitle = 'Early Access Alpha'
+            const pageHeading = IndexPageDom.find('h1')
+            const pageHeadingText = pageHeading.children().text()
 
-    expect(pageHeadingText).toEqual(pageTitle)
-})
+            expect(pageHeadingText).toEqual(pageTitle)
+        })
+    })
 
-test('Index Page contains a link to the Activities Page', () => {
-    const activitiesLinkDestination = activitiesLink.prop('to')
+    describe('Activities Link', () => {
+        const activitiesLink = IndexPageDom.find(Link)
 
-    expect(activitiesLinkDestination).toEqual(activitiesPageDestination)
-})
+        test('display text is "Go to Activities"', () => {
+            const activitiesLinkText = activitiesLink.children().text()
 
-test('Index Page contains a "Go to Activities" link', () => {
-    const activitiesLinkText = activitiesLink.children().text()
+            expect(activitiesLinkText).toEqual('Go to Activities')
+        })
 
-    expect(activitiesLinkText).toEqual('Go to Activities')
-})
+        test('points to the Activities Page', () => {
+            const activitiesPageDestination = '/activities/'
+            const activitiesLinkDestination = activitiesLink.prop('to')
 
-test('Index Page renders correctly', () => {
-    const tree = toJson(IndexPageDom)
+            expect(activitiesLinkDestination).toEqual(activitiesPageDestination)
+        })
+    })
 
-    expect(tree).toMatchSnapshot()
+    test('renders itself', () => {
+        const tree = toJson(IndexPageDom)
+
+        expect(tree).toMatchSnapshot()
+    })
 })
