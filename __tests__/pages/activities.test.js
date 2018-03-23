@@ -4,12 +4,9 @@ import toJson from 'enzyme-to-json'
 import Link from 'gatsby-link'
 import ActivitiesPage from '../../src/pages/activities'
 
-const ActivitiesPageDom = shallow(
-  <ActivitiesPage />
-)
+const ActivitiesPageDom = shallow(<ActivitiesPage />)
 
 describe('Activities Page', () => {
-
   describe('Page Heading', () => {
     test('display text is "Activites"', () => {
       const pageTitle = 'Activities'
@@ -43,8 +40,3 @@ describe('Activities Page', () => {
     expect(tree).toMatchSnapshot()
   })
 })
-
-
-
-
-

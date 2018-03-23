@@ -13,22 +13,18 @@ const mockData = {
     siteMetadata: {
       title: 'Site Title',
       description: 'Site Description',
-      keywords: 'one, two, three'
-    }
-  }
+      keywords: 'one, two, three',
+    },
+  },
 }
 
 const LayoutDom = shallow(
-  <TemplateWrapper data={mockData}>
-    {mockChildren}
-  </TemplateWrapper>
+  <TemplateWrapper data={mockData}>{mockChildren}</TemplateWrapper>
 )
 const helmet = LayoutDom.find(Helmet)
 
 describe('Index Layout', () => {
-
   describe('Helmet', () => {
-
     test('title is populated from site data', () => {
       const helmetTitleText = helmet.prop('title')
       const siteTitle = mockData.site.siteMetadata.title
@@ -55,7 +51,6 @@ describe('Index Layout', () => {
         expect(helmetKeywordsText).toEqual(siteKeywords)
       })
     })
-
   })
 
   describe('Header', () => {
@@ -69,7 +64,7 @@ describe('Index Layout', () => {
   })
 
   test('renders children', () => {
-    expect(mockChildren.mock.calls.length).toEqual(1);
+    expect(mockChildren.mock.calls.length).toEqual(1)
   })
 
   test('renders itself', () => {
