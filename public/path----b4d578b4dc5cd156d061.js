@@ -1,0 +1,2 @@
+webpackJsonp([60335399758886],{136:function(e,i){e.exports={data:{site:{siteMetadata:{title:"Learn Improv Online",description:"Free improv warm-ups and exercises with high-quality written descriptions, animated instructionals, and video examples. Start learning now!",keywords:"improv, learn improv, learn improv online"}}},layoutContext:{}}}});
+//# sourceMappingURL=path----b4d578b4dc5cd156d061.js.map
