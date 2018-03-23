@@ -15,9 +15,7 @@ const TemplateWrapper = ({ children, data }) => (
         { name: 'keywords', content: data.site.siteMetadata.keywords },
       ]}
     />
-    <Header>
-      {data.site.siteMetadata.title}
-    </Header>
+    <Header>{data.site.siteMetadata.title}</Header>
     <div
       style={{
         margin: '0 auto',
@@ -42,8 +40,8 @@ export const query = graphql`
   query HeaderQuery {
     site {
       siteMetadata {
-        title,
-        description,
+        title
+        description
         keywords
       }
     }

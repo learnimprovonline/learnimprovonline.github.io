@@ -26,7 +26,7 @@
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "test": "jest",
-    "test-watch": "jest --watchAll --verbose",
+    "test:watch": "jest --watchAll --verbose",
     "snapshots": "jest --updateSnapshot"
   },
   "jest": {

@@ -25,21 +25,21 @@ describe('Activities Page', () => {
 
     test('display text is "Go to Home" link', () => {
       const indexLinkText = indexLink.children().text()
-    
+
       expect(indexLinkText).toEqual('Go to Home')
     })
 
     test('points to the Index Page', () => {
       const indexPageDestination = '/'
       const indexLinkDestination = indexLink.prop('to')
-    
+
       expect(indexLinkDestination).toEqual(indexPageDestination)
     })
   })
 
   test('renders itself', () => {
     const tree = toJson(ActivitiesPageDom)
-  
+
     expect(tree).toMatchSnapshot()
   })
 })
