@@ -32,5 +32,12 @@ module.exports = {
       },
     },
     "gatsby-plugin-offline",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "activities",
+        path: `${__dirname}/content/activities`,
+      }
+    }
   ],
 }
