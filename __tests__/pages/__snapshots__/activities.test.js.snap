@@ -13,5 +13,23 @@ exports[`Activities Page renders itself 1`] = `
   >
     Go to Home
   </GatsbyLink>
+  <hr />
+  <ul>
+    <li
+      key="0"
+    >
+      node one
+    </li>
+    <li
+      key="1"
+    >
+      node two
+    </li>
+    <li
+      key="2"
+    >
+      node three
+    </li>
+  </ul>
 </div>
 `;
