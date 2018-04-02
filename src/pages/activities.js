@@ -13,9 +13,9 @@ const ActivitesPage = ({ data }) => (
     <Link to="/">Go to Home</Link>
     <hr />
     <ul>
-      {data.allFile.edges.map(({ node }, index) =>
-        <li key={index}>{node.name}</li>
-      )}
+      {data.allMarkdownRemark.edges.map(({ node }, index) => (
+        <li key={index}>{node.frontmatter.title}</li>
+      ))}
     </ul>
   </div>
 )
@@ -24,10 +24,14 @@ export default ActivitesPage
 
 export const query = graphql`
   query ActivityList {
-    allFile {
+    allMarkdownRemark {
       edges {
         node {
-          name
+          frontmatter {
+            title
+            type
+            foci
+          }
         }
       }
     }

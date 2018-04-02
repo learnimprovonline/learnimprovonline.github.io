@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Activities Page renders itself 1`] = `
+exports[`Activities Page renders itself as expected 1`] = `
 <div>
   <h1>
     Activities
@@ -18,17 +18,17 @@ exports[`Activities Page renders itself 1`] = `
     <li
       key="0"
     >
-      node one
+      One
     </li>
     <li
       key="1"
     >
-      node two
+      Two
     </li>
     <li
       key="2"
     >
-      node three
+      Three
     </li>
   </ul>
 </div>

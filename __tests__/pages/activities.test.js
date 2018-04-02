@@ -5,21 +5,27 @@ import Link from 'gatsby-link'
 import ActivitiesPage from '../../src/pages/activities'
 
 const mockData = {
-  allFile: {
+  allMarkdownRemark: {
     edges: [
       {
         node: {
-          name: 'node one',
+          frontmatter: {
+            title: 'One',
+          },
         },
       },
       {
         node: {
-          name: 'node two',
+          frontmatter: {
+            title: 'Two',
+          },
         },
       },
       {
         node: {
-          name: 'node three',
+          frontmatter: {
+            title: 'Three',
+          },
         },
       },
     ],
@@ -64,16 +70,16 @@ describe('Activities Page', () => {
     })
     test('list items populated from site data', () => {
       const listItems = activityList.find('li')
-      const files = mockData.allFile.edges
+      const files = mockData.allMarkdownRemark.edges
 
-      expect(listItems).toHaveLength(mockData.allFile.edges.length)
-      expect(listItems.at(0).text()).toEqual(files[0].node.name)
-      expect(listItems.at(1).text()).toEqual(files[1].node.name)
-      expect(listItems.at(2).text()).toEqual(files[2].node.name)
+      expect(listItems).toHaveLength(files.length)
+      expect(listItems.at(0).text()).toEqual(files[0].node.frontmatter.title)
+      expect(listItems.at(1).text()).toEqual(files[1].node.frontmatter.title)
+      expect(listItems.at(2).text()).toEqual(files[2].node.frontmatter.title)
     })
   })
 
-  test('renders itself', () => {
+  test('renders itself as expected', () => {
     const tree = toJson(ActivitiesPageDom)
 
     expect(tree).toMatchSnapshot()
