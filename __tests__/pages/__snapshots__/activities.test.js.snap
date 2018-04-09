@@ -18,17 +18,29 @@ exports[`Activities Page renders itself as expected 1`] = `
     <li
       key="0"
     >
-      One
+      <GatsbyLink
+        to="slug1"
+      >
+        One
+      </GatsbyLink>
     </li>
     <li
       key="1"
     >
-      Two
+      <GatsbyLink
+        to="slug2"
+      >
+        Two
+      </GatsbyLink>
     </li>
     <li
       key="2"
     >
-      Three
+      <GatsbyLink
+        to="slug3"
+      >
+        Three
+      </GatsbyLink>
     </li>
   </ul>
 </div>

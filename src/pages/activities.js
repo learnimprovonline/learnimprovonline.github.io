@@ -14,7 +14,9 @@ const ActivitesPage = ({ data }) => (
     <hr />
     <ul>
       {data.allMarkdownRemark.edges.map(({ node }, index) => (
-        <li key={index}>{node.frontmatter.title}</li>
+        <li key={index}>
+          <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+        </li>
       ))}
     </ul>
   </div>
@@ -31,6 +33,9 @@ export const query = graphql`
             title
             type
             foci
+          }
+          fields {
+            slug
           }
         }
       }

@@ -9,6 +9,9 @@ const mockData = {
     edges: [
       {
         node: {
+          fields: {
+            slug: 'slug1',
+          },
           frontmatter: {
             title: 'One',
           },
@@ -16,6 +19,9 @@ const mockData = {
       },
       {
         node: {
+          fields: {
+            slug: 'slug2',
+          },
           frontmatter: {
             title: 'Two',
           },
@@ -23,6 +29,9 @@ const mockData = {
       },
       {
         node: {
+          fields: {
+            slug: 'slug3',
+          },
           frontmatter: {
             title: 'Three',
           },
@@ -46,7 +55,7 @@ describe('Activities Page', () => {
   })
 
   describe('Index Link', () => {
-    const indexLink = ActivitiesPageDom.find(Link)
+    const indexLink = ActivitiesPageDom.find(Link).at(0)
 
     test('display text is "Go to Home" link', () => {
       const indexLinkText = indexLink.children().text()
@@ -64,18 +73,37 @@ describe('Activities Page', () => {
 
   describe('Activity List', () => {
     const activityList = ActivitiesPageDom.find('ul')
+    const files = mockData.allMarkdownRemark.edges
 
     test('should exist', () => {
-      expect(activityList.exists()).toEqual(true)
+      expect(activityList.exists()).toBe(true)
     })
-    test('list items populated from site data', () => {
-      const listItems = activityList.find('li')
-      const files = mockData.allMarkdownRemark.edges
 
-      expect(listItems).toHaveLength(files.length)
-      expect(listItems.at(0).text()).toEqual(files[0].node.frontmatter.title)
-      expect(listItems.at(1).text()).toEqual(files[1].node.frontmatter.title)
-      expect(listItems.at(2).text()).toEqual(files[2].node.frontmatter.title)
+    test('should have one list item for each data item', () => {
+      expect(activityList.children('li')).toHaveLength(files.length)
+    })
+
+    describe('List Items', () => {
+      const listItems = activityList.find('li')
+
+      listItems.forEach((listItem, index) => {
+        const link = listItem.find(Link)
+
+        test('should contain a link to the data slug', () => {
+          const linkDestination = link.prop('to')
+          const fileSlug = files[index].node.fields.slug
+
+          expect(link.exists()).toBe(true)
+          expect(linkDestination).toEqual(fileSlug)
+        })
+
+        test('should have display text of the frontmatter title', () => {
+          const linkText = link.children().text()
+          const fileTitle = files[index].node.frontmatter.title
+
+          expect(linkText).toEqual(fileTitle)
+        })
+      })
     })
   })
 
