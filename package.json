@@ -27,6 +27,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write {src,__{tests,mocks}__}/**/*.js",
+    "format:config": "prettier --trailing-comma es5 --no-semi --single-quote --write *.js",
     "test": "jest",
     "test:watch": "jest --watchAll --verbose",
     "snapshots": "jest --updateSnapshot"
