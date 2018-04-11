@@ -6,9 +6,9 @@ foci:
   - Observation
 date: 2013-10-07
 source: University of Texas at Austin
-min-people: 3
+minimumPeople: 3
 duration: 2
-duration-type: constant
+durationType: constant
 ---
 {{ site.data.components["Circle Up"] }}
 Ask the group to repeat the words "Zip, Zap, Zop" three or four times, all together.

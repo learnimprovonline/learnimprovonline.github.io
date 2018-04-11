@@ -5,9 +5,9 @@ foci:
   - Growth
 source: "Keith Curtis"
 date: 2015-08-18
-min-people: 3
+minimumPeople: 3
 duration: 8
-duration-type: linear
+durationType: linear
 ---
 Group splits into equal parts On and equal parts Off.
 Each person Off chooses a person On to watch during the exercise.

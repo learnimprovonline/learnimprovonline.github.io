@@ -5,9 +5,9 @@ foci:
   - Content
 source: "Keith Curtis"
 date: 2015-08-18
-min-people: 2
+minimumPeople: 2
 duration: 3
-duration-type: linear
+durationType: linear
 ---
 Perform a series of two person scenes in sixty seconds.
 Now perform a series of two person scenes in five seconds.

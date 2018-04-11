@@ -6,9 +6,9 @@ foci:
   - Energy
 source: "Ashley Osborn"
 date: 2015-12-14
-min-people: 3
+minimumPeople: 3
 duration: 5
-duration-type: constant
+durationType: constant
 ---
 {{ site.data.components["Circle Up"] }}
 Everyone gathers in tightly, looking down with their shoulders touching.

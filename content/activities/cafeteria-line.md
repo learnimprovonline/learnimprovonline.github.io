@@ -6,9 +6,9 @@ foci:
   - Heightening
 source: "Bobby McCosky"
 date: 2015-08-04
-min-people: 2
+minimumPeople: 2
 duration: 1
-duration-type: linear
+durationType: linear
 ---
 Players form into a single line.
 Optionally, a suggestion of a type of restaurant can be given.

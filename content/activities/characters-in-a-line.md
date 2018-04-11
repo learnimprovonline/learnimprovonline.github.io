@@ -8,9 +8,9 @@ foci:
   - Energy
 source: "Ashley Osborn"
 date: 2015-12-14
-min-people: 1
+minimumPeople: 1
 duration: 10
-duration-type: constant
+durationType: constant
 ---
 Three person scene which begins with a suggestion of a place where people might be waiting in a line.
 Requires a line of at least six chairs.

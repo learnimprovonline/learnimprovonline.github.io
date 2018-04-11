@@ -9,9 +9,9 @@ foci:
   - Environment
 source: "Ashley Osborn"
 date: 2015-12-14
-min-people: 2
+minimumPeople: 2
 duration: 5
-duration-type: linear
+durationType: linear
 ---
 Start with a suggestion for a type of store.
 Start a two person transaction scene with the clerk working in the store as the straight-man.

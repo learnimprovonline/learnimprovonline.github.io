@@ -8,9 +8,9 @@ source:
   - "Keith Curtis"
   - "Michael Hudgens"
 date: 2015-08-18
-min-people: 3
+minimumPeople: 3
 duration: 5
-duration-type: constant
+durationType: constant
 ---
 {{ site.data.components["Circle Up"] }}
 Start by creating a set of linked identifiers following a theme (e.g. numbers, colors, animals, etc.).

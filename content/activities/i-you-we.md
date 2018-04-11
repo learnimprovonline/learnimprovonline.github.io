@@ -5,9 +5,9 @@ foci:
   - Relationship
 source: "Bobby McCosky"
 date: 2015-08-04
-min-people: 3
+minimumPeople: 3
 duration: 4
-duration-type: linear
+durationType: linear
 ---
 Two person scenes beginning with a suggestion.
 The start of every sentence must begin with either "I", "You", or "We."

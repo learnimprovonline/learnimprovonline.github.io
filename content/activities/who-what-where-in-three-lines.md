@@ -5,9 +5,9 @@ foci:
   - Content
 source: "Bobby McCosky"
 date: 2015-08-04
-min-people: 2
+minimumPeople: 2
 duration: 2
-duration-type: linear
+durationType: linear
 ---
 {{ site.data.components["Form Two Lines"] }}
 

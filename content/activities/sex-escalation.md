@@ -5,9 +5,9 @@ foci:
   - Growth
 source: "Laura Irwin"
 date: 2015-11-30
-min-people: 2
+minimumPeople: 2
 duration: 3
-duration-type: linear
+durationType: linear
 ---
 {{ site.data.components["Form Two Lines"] }}
 Two person scenes that start with a suggestion for a location.

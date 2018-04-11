@@ -7,9 +7,9 @@ foci:
   - Observation
 source: "Luke Dodge"
 date: 2016-07-21
-min-people: 2
+minimumPeople: 2
 duration: 1
-duration-type: linear
+durationType: linear
 ---
 Everyone off to the sides except for one person who is watching.
 The one person watching will give a suggestion of a location and silently count off five seconds.

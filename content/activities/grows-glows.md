@@ -5,9 +5,9 @@ foci:
   - Growth
 source: "Keith Curtis"
 date: 2015-08-18
-min-people: 2
+minimumPeople: 2
 duration: 1
-duration-type: linear
+durationType: linear
 ---
 {{ site.data.components["Circle Up"] }}
 Tell the person to your left something in improv which he/she:

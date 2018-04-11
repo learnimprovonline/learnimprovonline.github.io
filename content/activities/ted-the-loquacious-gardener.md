@@ -5,9 +5,9 @@ foci:
   - Character
 source: "Ashley Osborn"
 date:   2015-12-14
-min-people: 2
+minimumPeople: 2
 duration: 4
-duration-type: linear
+durationType: linear
 ---
 {{ site.data.components["Circle Up"] }}
 One person is given three suggestions (in order):

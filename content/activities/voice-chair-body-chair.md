@@ -5,9 +5,9 @@ foci:
   - Character
 source: "Keith Curtis"
 date: 2015-08-18
-min-people: 3
+minimumPeople: 3
 duration: 4
-duration-type: linear
+durationType: linear
 ---
 Two person scene with both people sitting in chairs.
 The person in the right chair and starts with a character whose voice is inspired by a suggestion.

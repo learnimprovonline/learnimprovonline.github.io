@@ -7,9 +7,9 @@ foci:
   - Game
 source: "Chris Stoker"
 date: 2015-08-29
-min-people: 2
+minimumPeople: 2
 duration: 3
-duration-type: linear
+durationType: linear
 ---
 {{ site.data.components["Form Two Lines"] }}
 Two person scene with one straight character (left side), the other characterized by <adjective> <job> (right side).
