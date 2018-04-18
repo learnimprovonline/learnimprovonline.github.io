@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Activity Page Template Attribute List renders itself as expected 1`] = `
+<div>
+  <h1>
+    Activity Title
+  </h1>
+  <dl>
+    <dt>
+      Type
+    </dt>
+    <dd>
+      Activity Type
+    </dd>
+    <dt>
+      Foci
+    </dt>
+    <dd>
+      Focus One, Focus Two
+    </dd>
+    <dt>
+      Minimum People
+    </dt>
+    <dd>
+      3
+    </dd>
+    <dt>
+      Duration
+    </dt>
+    <dd>
+      4 minutes
+    </dd>
+  </dl>
+  <div
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+  />
+</div>
+`;
