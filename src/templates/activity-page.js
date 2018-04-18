@@ -18,7 +18,7 @@ export default ({ data }) => {
           {NewDurationDisplayText(activity.duration, activity.durationType, activity.peoplePerScene)}
         </dd>
       </dl>
-      <div dangerouslySetInnerHTML={{ __html: activity.html }} />
+      <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
     </div>
   )
 }
