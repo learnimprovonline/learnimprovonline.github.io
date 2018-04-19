@@ -64,8 +64,8 @@ describe('Activities Page', () => {
     })
 
     test('points to the Index Page', () => {
-      const indexPageDestination = '/'
       const indexLinkDestination = indexLink.prop('to')
+      const indexPageDestination = '/'
 
       expect(indexLinkDestination).toEqual(indexPageDestination)
     })

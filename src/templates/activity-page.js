@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'gatsby-link'
 import { graphql } from 'graphql'
 
 export default ({ data }) => {
@@ -19,6 +20,7 @@ export default ({ data }) => {
         </dd>
       </dl>
       <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+      <Link to="/activities/">Back to Activities</Link>
     </div>
   )
 }

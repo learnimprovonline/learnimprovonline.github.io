@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Activity Page Template Attribute List renders itself as expected 1`] = `
+exports[`Activity Page Template renders itself as expected 1`] = `
 <div>
   <h1>
     Activity Title
@@ -38,5 +38,10 @@ exports[`Activity Page Template Attribute List renders itself as expected 1`] = 
       }
     }
   />
+  <GatsbyLink
+    to="/activities/"
+  >
+    Back to Activities
+  </GatsbyLink>
 </div>
 `;
