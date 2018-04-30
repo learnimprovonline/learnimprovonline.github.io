@@ -22,6 +22,8 @@ const ActivitesPage = ({ data }) => (
   </div>
 )
 
+// TODO: Sort activities alphabetically
+
 export default ActivitesPage
 
 export const query = graphql`
