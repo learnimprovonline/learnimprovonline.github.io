@@ -11,7 +11,7 @@ minimumPeople: 2
 duration: 10
 durationType: linear
 ---
-{{ site.data.components["Form Two Lines"] }}
+Players form two lines of equal length. Mix it up so players are not across from someone they've done senes with already.
 Two person scene starts with the following sequence steps:
 
 1. Person #1 starts the scene with an action/activity.
@@ -22,7 +22,7 @@ Two person scene starts with the following sequence steps:
 6. Person #1 then says something about what they observe about Person #2.
 
 The scene continues focusing on these relationships.
-{{ site.data.components["Switch Lines"] }}
+Players switch lines when he/she has completed a scene. Continue until every player has completed a scene from both lines.
 
 Be sure to give these scenes time to breathe.
 It's not uncommon for these scenes to last five minutes or more.

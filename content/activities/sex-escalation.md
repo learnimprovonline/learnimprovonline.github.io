@@ -9,9 +9,9 @@ minimumPeople: 2
 duration: 3
 durationType: linear
 ---
-{{ site.data.components["Form Two Lines"] }}
+Players form two lines of equal length. Mix it up so players are not across from someone they've done senes with already.
 Two person scenes that start with a suggestion for a location.
 Each person in the scene plays a character who is intensely sexually attracted to the other.
 There is no backing down, only escalation.
 Find your limits and break through them.
-{{ site.data.components["Switch Lines"] }}
+Players switch lines when he/she has completed a scene. Continue until every player has completed a scene from both lines.

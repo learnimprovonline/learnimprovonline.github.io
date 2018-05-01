@@ -9,7 +9,7 @@ minimumPeople: 2
 duration: 4
 durationType: linear
 ---
-{{ site.data.components["Circle Up"] }}
+Players to stand in a circle with the order randomized using whatever method you prefer.
 One person is given three suggestions (in order):
 
 1. Name
