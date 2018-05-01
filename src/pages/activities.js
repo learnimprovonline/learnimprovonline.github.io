@@ -22,13 +22,13 @@ const ActivitesPage = ({ data }) => (
   </div>
 )
 
-// TODO: Sort activities alphabetically
-
 export default ActivitesPage
 
 export const query = graphql`
   query ActivityList {
-    allMarkdownRemark {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___title], order: ASC}
+    ) {
       edges {
         node {
           frontmatter {
