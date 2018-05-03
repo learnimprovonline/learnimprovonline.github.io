@@ -38,7 +38,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'activities',
-        path: `${__dirname}/content/activities`,
+        path: `${__dirname}/content/activity/activities`,
       },
     },
   ],

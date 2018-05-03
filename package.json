@@ -31,9 +31,9 @@
     "test": "jest",
     "test:watch": "jest --watchAll --verbose",
     "snapshots": "jest --updateSnapshot",
-    "activities:cpy": "copyfiles -f content/activity-blueprints/*.md content/activities/",
-    "activities:del": "del-cli content/activities -f",
-    "activities:gen": "npm run activities:del && npm run activities:cpy && node replace.js"
+    "activities:cpy": "copyfiles -f content/activity/blueprints/*.md content/activity/activities/",
+    "activities:del": "del-cli content/activity/activities/*.md -f",
+    "activities:gen": "npm run activities:del && npm run activities:cpy && node ./content/activity/replace-tokens.js"
   },
   "jest": {
     "testRegex": ".+test\\.js$",

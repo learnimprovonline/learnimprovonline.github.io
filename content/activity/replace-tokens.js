@@ -1,5 +1,5 @@
 const replace = require('replace-in-file')
-const conventions = require('./content/activity-conventions')
+const conventions = require('./conventions')
 
 const from = []
 const to = []
@@ -13,7 +13,7 @@ conventions.forEach((convention) => {
 console.log(from)
 
 const options = {
-  files: 'content/activities/*.md',
+  files: 'content/activity/activities/*.md',
   from: from,
   to: to,
 };
