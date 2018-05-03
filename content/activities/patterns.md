@@ -12,7 +12,7 @@ minimumPeople: 3
 duration: 5
 durationType: constant
 ---
-{{ site.data.components["Circle Up"] }}
+Players to stand in a circle with the order randomized using whatever method you prefer.
 Start by creating a set of linked identifiers following a theme (e.g. numbers, colors, animals, etc.).
 To do this, point at a person who hasn't been pointed at yet and say something in line with the theme which has been created.
 The theme can either be stated ahead of time or created organically.

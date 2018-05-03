@@ -9,7 +9,7 @@ minimumPeople: 2
 duration: 1
 durationType: linear
 ---
-{{ site.data.components["Circle Up"] }}
+Players to stand in a circle with the order randomized using whatever method you prefer.
 Tell the person to your left something in improv which he/she:
 
 1. does well or you appreciate

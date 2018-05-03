@@ -9,5 +9,5 @@ minimumPeople: 1
 duration: 1
 durationType: linear
 ---
-{{ site.data.components["Circle Up"] }}
+Players to stand in a circle with the order randomized using whatever method you prefer.
 Each person comes up with a line from a children’s book which would work equally well as dialogue for pornography.
