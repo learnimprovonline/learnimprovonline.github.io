@@ -1,5 +1,5 @@
 const replace = require('replace-in-file')
-const conventions = require('./conventions')
+const conventions = require('./conventions.json')
 
 const from = []
 const to = []
