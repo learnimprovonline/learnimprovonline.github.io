@@ -7,6 +7,7 @@ module.exports = {
     keywords: 'improv, learn improv, learn improv online',
   },
   plugins: [
+	'gatsby-plugin-react-next',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
     {
