@@ -1,5 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
+import toJson from 'enzyme-to-json'
 import Link from 'gatsby-link'
 import FocusPage from '../../src/pages/focus'
 
@@ -76,7 +77,7 @@ describe('Focus Page', () => {
         test('has a term element for each focus', () => {
             const terms = focusList.find('dt')
 
-            mockFoci.forEach((mockFocus, index) =>{
+            mockFoci.forEach((mockFocus, index) => {
                 const term = terms.at(index).text()
 
                 expect(term).toEqual(mockFocus.name)
@@ -86,11 +87,17 @@ describe('Focus Page', () => {
         test('has a definition element for each focus', () => {
             const definitions = focusList.find('dd')
 
-            mockFoci.forEach((mockFocus, index) =>{
+            mockFoci.forEach((mockFocus, index) => {
                 const definition = definitions.at(index).text()
-                
+
                 expect(definition).toEqual(mockFocus.description)
             })
         })
+    })
+
+    test('renders itself as expected', () => {
+        const tree = toJson(FocusPageDom)
+
+        expect(tree).toMatchSnapshot()
     })
 })
