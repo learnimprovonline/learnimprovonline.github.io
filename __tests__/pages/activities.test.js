@@ -54,20 +54,37 @@ describe('Activities Page', () => {
     })
   })
 
-  describe('Index Link', () => {
-    const indexLink = ActivitiesPageDom.find(Link).at(0)
+  describe('Focus Page Link', () => {
+    const focusLink = ActivitiesPageDom.find(Link).at(0)
 
-    test('display text is "Go to Home" link', () => {
-      const indexLinkText = indexLink.children().text()
+    test('display text is "Focus"', () => {
+      const homeLinkText = focusLink.children().text()
 
-      expect(indexLinkText).toEqual('Go to Home')
+      expect(homeLinkText).toEqual('Focus')
+    })
+
+    test('points to the Focus Page', () => {
+      const focusPagePath = '/focus/'
+      const focusLinkDestination = focusLink.prop('to')
+
+      expect(focusLinkDestination).toEqual(focusPagePath)
+    })
+  })
+
+  describe('Home Page Link', () => {
+    const homeLink = ActivitiesPageDom.find(Link).at(1)
+
+    test('display text is "Go to Home"', () => {
+      const homeLinkText = homeLink.children().text()
+
+      expect(homeLinkText).toEqual('Go to Home')
     })
 
     test('points to the Index Page', () => {
-      const indexLinkDestination = indexLink.prop('to')
-      const indexPageDestination = '/'
+      const homePagePath = '/'
+      const homeLinkDestination = homeLink.prop('to')
 
-      expect(indexLinkDestination).toEqual(indexPageDestination)
+      expect(homeLinkDestination).toEqual(homePagePath)
     })
   })
 

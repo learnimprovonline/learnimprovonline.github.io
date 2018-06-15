@@ -10,6 +10,8 @@ const ActivitesPage = ({ data }) => (
       descriptions, animated instructionals, and video examples. Empowering you
       and your team the ability to take yourself to the next level.
     </p>
+    <Link to="/focus/">Focus</Link>
+    <br />
     <Link to="/">Go to Home</Link>
     <hr />
     <ul>

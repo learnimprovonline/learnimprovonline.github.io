@@ -9,6 +9,12 @@ exports[`Activities Page renders itself as expected 1`] = `
     Learn improv warm-ups and exercises through a variety of written descriptions, animated instructionals, and video examples. Empowering you and your team the ability to take yourself to the next level.
   </p>
   <GatsbyLink
+    to="/focus/"
+  >
+    Focus
+  </GatsbyLink>
+  <br />
+  <GatsbyLink
     to="/"
   >
     Go to Home
