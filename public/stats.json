@@ -13,8 +13,8 @@
       "path---scream-c12cfe47d8eeaa7a6d27.js.map"
     ],
     "component---src-pages-activities-js": [
-      "component---src-pages-activities-js-14f35363020b3c7a5585.js",
-      "component---src-pages-activities-js-14f35363020b3c7a5585.js.map"
+      "component---src-pages-activities-js-e5e6398d5dd1549579c4.js",
+      "component---src-pages-activities-js-e5e6398d5dd1549579c4.js.map"
     ],
     "path---actor-switch": [
       "path---actor-switch-a4dc017e253503258402.js",
@@ -39,6 +39,10 @@
     "path---zip-zap-zop-elimination": [
       "path---zip-zap-zop-elimination-1490187acc106d3ca648.js",
       "path---zip-zap-zop-elimination-1490187acc106d3ca648.js.map"
+    ],
+    "component---src-pages-focus-js": [
+      "component---src-pages-focus-js-dd25338c5eb8b0d61d11.js",
+      "component---src-pages-focus-js-dd25338c5eb8b0d61d11.js.map"
     ],
     "path---say-what-you-see": [
       "path---say-what-you-see-cd39c843eed9569cfd04.js",
@@ -108,6 +112,10 @@
       "path---404-html-a0e39f21c11f6a62c5ab.js",
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
     ],
+    "path---focus": [
+      "path---focus-a0e39f21c11f6a62c5ab.js",
+      "path---focus-a0e39f21c11f6a62c5ab.js.map"
+    ],
     "path---descriptive-start": [
       "path---descriptive-start-1f6eaf9328ab8456972a.js",
       "path---descriptive-start-1f6eaf9328ab8456972a.js.map"
@@ -129,9 +137,9 @@
       "path---who-what-where-in-three-lines-d20c935b6acb5e8c4eea.js.map"
     ],
     "app": [
-      "app-df7517e0d6e5a5678fc2.js",
+      "app-7656d12cee792a240f8c.js",
       "build-js-styles.css",
-      "app-df7517e0d6e5a5678fc2.js.map",
+      "app-7656d12cee792a240f8c.js.map",
       "build-js-styles.css.map"
     ],
     "path---town-gossip": [
