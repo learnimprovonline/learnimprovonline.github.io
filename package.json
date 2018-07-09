@@ -9,14 +9,14 @@
     "url": "https://github.com/lrdodge/learnimprovonline.github.io"
   },
   "dependencies": {
-    "gatsby": "^1.9.232",
-    "gatsby-link": "^1.6.24",
-    "gatsby-plugin-manifest": "^1.0.12",
-    "gatsby-plugin-offline": "^1.0.12",
+    "gatsby": "^1.9.273",
+    "gatsby-link": "^1.6.45",
+    "gatsby-plugin-manifest": "^1.0.27",
+    "gatsby-plugin-offline": "^1.0.18",
     "gatsby-plugin-react-helmet": "^1.0.8",
-    "gatsby-plugin-sitemap": "^1.2.9",
-    "gatsby-source-filesystem": "^1.5.27",
-    "gatsby-transformer-remark": "^1.7.39"
+    "gatsby-plugin-sitemap": "^1.2.25",
+    "gatsby-source-filesystem": "^1.5.39",
+    "gatsby-transformer-remark": "^1.7.44"
   },
   "keywords": [
     "gatsby"
@@ -55,10 +55,10 @@
     "del-cli": "^1.1.0",
     "enzyme": "^3.1.1",
     "enzyme-adapter-react-15": "^1.0.5",
-    "enzyme-to-json": "^3.3.0",
+    "enzyme-to-json": "^3.3.4",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^21.2.1",
-    "prettier": "^1.11.1",
+    "prettier": "^1.13.7",
     "react-test-renderer": "^15.0.0",
     "replace-in-file": "^3.4.0"
   }
