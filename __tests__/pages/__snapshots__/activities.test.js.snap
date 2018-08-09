@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Activities Page renders itself as expected 1`] = `
-<div>
+<div
+  className="container"
+>
   <h1>
     Activities
   </h1>
@@ -13,16 +15,10 @@ exports[`Activities Page renders itself as expected 1`] = `
   >
     Focus
   </GatsbyLink>
-  <br />
-  <GatsbyLink
-    to="/"
-  >
-    Go to Home
-  </GatsbyLink>
   <hr />
   <ul>
     <li
-      key="0"
+      key="One"
     >
       <GatsbyLink
         to="slug1"
@@ -31,7 +27,7 @@ exports[`Activities Page renders itself as expected 1`] = `
       </GatsbyLink>
     </li>
     <li
-      key="1"
+      key="Two"
     >
       <GatsbyLink
         to="slug2"
@@ -40,7 +36,7 @@ exports[`Activities Page renders itself as expected 1`] = `
       </GatsbyLink>
     </li>
     <li
-      key="2"
+      key="Three"
     >
       <GatsbyLink
         to="slug3"

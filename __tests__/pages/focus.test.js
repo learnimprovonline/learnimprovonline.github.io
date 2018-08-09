@@ -4,7 +4,7 @@ import toJson from 'enzyme-to-json'
 import Link from 'gatsby-link'
 import FocusPage from '../../src/pages/focus'
 
-jest.mock('../../content/focus/foci.json', () => ([
+jest.mock('../../src/data/focus/foci.json', () => ([
     {
         "name": "One",
         "description": "A"
@@ -18,7 +18,7 @@ jest.mock('../../content/focus/foci.json', () => ([
         "description": "C"
     }
 ]), { virtual: true })
-const mockFoci = require('../../content/focus/foci.json')
+const mockFoci = require('../../src/data/focus/foci.json')
 
 const FocusPageDom = shallow(<FocusPage />)
 
@@ -47,23 +47,6 @@ describe('Focus Page', () => {
             const activityLinkDestination = activitiesLink.prop('to')
 
             expect(activityLinkDestination).toEqual(activityPagePath)
-        })
-    })
-
-    describe('Home Page Link', () => {
-        const homeLink = FocusPageDom.find(Link).at(1)
-
-        test('display text is "Go to Home"', () => {
-            const homeLinkText = homeLink.children().text()
-
-            expect(homeLinkText).toBe('Go to Home')
-        })
-
-        test('points to the Home Page', () => {
-            const homePagePath = '/'
-            const homeLinkDestination = homeLink.prop('to')
-
-            expect(homeLinkDestination).toEqual(homePagePath)
         })
     })
 

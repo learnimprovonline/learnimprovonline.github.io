@@ -1,11 +1,11 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import { graphql } from 'graphql'
+import React from 'react';
+import Link from 'gatsby-link';
+import { graphql } from 'graphql';
 
 export default ({ data }) => {
-  const activity = data.markdownRemark.frontmatter
+  const activity = data.markdownRemark.frontmatter;
   return (
-    <div>
+    <div className="container">
       <h1>{activity.title}</h1>
       <dl>
         <dt>Type</dt>
@@ -22,27 +22,27 @@ export default ({ data }) => {
       <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
       <Link to="/activities/">Back to Activities</Link>
     </div>
-  )
-}
+  );
+};
 
 export const NewDurationDisplayText = (duration, durationType, peoplePerScene) => {
-  let displaySuffix
+  let displaySuffix;
   switch (durationType) {
     case 'linear':
-      displaySuffix = ' per person'
-      break
+      displaySuffix = ' per person';
+      break;
     case 'step':
-      displaySuffix = ` per ${peoplePerScene} people`
-      break
+      displaySuffix = ` per ${peoplePerScene} people`;
+      break;
     default:
-      displaySuffix = ''
-      break
+      displaySuffix = '';
+      break;
   }
 
-  let plural = duration > 1 ? 's' : ''
+  const plural = duration > 1 ? 's' : '';
 
-  return `${duration} minute${plural}${displaySuffix}`
-}
+  return `${duration} minute${plural}${displaySuffix}`;
+};
 
 export const query = graphql`
   query ActivityQuery($slug: String!) {
@@ -59,4 +59,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

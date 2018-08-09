@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
 import Link from 'gatsby-link'
-import Header from '../../src/components/header.js'
+import Header from '../../src/components/header'
 
 const HeaderDom = shallow(<Header>{'Site Name'}</Header>)
 const link = HeaderDom.find(Link)

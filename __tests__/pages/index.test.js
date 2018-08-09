@@ -2,9 +2,30 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
 import Link from 'gatsby-link'
-import IndexPage from '../../src/pages/index.js'
+import IndexPage from '../../src/pages/index'
 
-const IndexPageDom = shallow(<IndexPage />)
+const mockData = {
+  "allDataJson": {
+    "edges": [
+      {
+        "node": {
+          "features": [
+            {
+              "title": "Basic configuration and folder structure"
+            },
+          ],
+          "howTo": [
+            {
+              "title": "Prepare a coffee"
+            },
+          ]
+        }
+      }
+    ]
+  }
+}
+
+const IndexPageDom = shallow(<IndexPage data={mockData} />)
 
 describe('Index Page', () => {
   describe('Page Heading', () => {
@@ -19,6 +40,10 @@ describe('Index Page', () => {
 
   describe('Activities Link', () => {
     const activitiesLink = IndexPageDom.find(Link)
+
+    test('exists', () => {
+      expect(activitiesLink).toHaveLength(1)
+    })
 
     test('display text is "Go to Activities"', () => {
       const activitiesLinkText = activitiesLink.children().text()

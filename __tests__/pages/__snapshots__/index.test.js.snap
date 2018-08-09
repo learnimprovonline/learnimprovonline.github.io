@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Index Page renders itself 1`] = `
-<div>
+<div
+  className="container"
+>
   <h1>
     Early Access Alpha
   </h1>
@@ -16,5 +18,23 @@ exports[`Index Page renders itself 1`] = `
   >
     Go to Activities
   </GatsbyLink>
+  <NewsListing
+    data={
+      Array [
+        Object {
+          "title": "Basic configuration and folder structure",
+        },
+      ]
+    }
+  />
+  <NewsListing
+    data={
+      Array [
+        Object {
+          "title": "Prepare a coffee",
+        },
+      ]
+    }
+  />
 </div>
 `;

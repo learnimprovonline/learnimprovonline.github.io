@@ -1,3 +1,6 @@
+const pixrem = require('pixrem');
+const autoprefixer = require('autoprefixer');
+
 module.exports = {
   siteMetadata: {
     title: 'Learn Improv Online',
@@ -7,38 +10,35 @@ module.exports = {
     keywords: 'improv, learn improv, learn improv online',
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sitemap',
+    `gatsby-plugin-react-next`,
+    `gatsby-plugin-react-helmet`,
+    `svgo`,
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: `gatsby-plugin-postcss-sass`,
       options: {
-        name: 'Learn Improv Online',
-        short_name: 'LIO',
-        start_url: '/',
-        background_color: '#f7f0eb',
-        theme_color: '#a2466c',
-        display: 'standalone',
-        icons: [
-          {
-            src: '/logos/logo-192.png',
-            sizes: '192x192',
-            type: 'image/png',
-          },
-          {
-            src: '/logos/logo-512.png',
-            sizes: '512x512',
-            type: 'image/png',
-          },
+        postCssPlugins: [
+          pixrem(),
+          autoprefixer({
+            browsers: ['last 2 versions']
+          })
         ],
+        precision: 8
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data/`,
       },
     },
-    'gatsby-plugin-offline',
+    `gatsby-transformer-json`,
     'gatsby-transformer-remark',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'activities',
-        path: `${__dirname}/content/activity/activities`,
+        path: `${__dirname}/src/data/activities`,
       },
     },
   ],

@@ -71,23 +71,6 @@ describe('Activities Page', () => {
     })
   })
 
-  describe('Home Page Link', () => {
-    const homeLink = ActivitiesPageDom.find(Link).at(1)
-
-    test('display text is "Go to Home"', () => {
-      const homeLinkText = homeLink.children().text()
-
-      expect(homeLinkText).toEqual('Go to Home')
-    })
-
-    test('points to the Index Page', () => {
-      const homePagePath = '/'
-      const homeLinkDestination = homeLink.prop('to')
-
-      expect(homeLinkDestination).toEqual(homePagePath)
-    })
-  })
-
   describe('Activity List', () => {
     const activityList = ActivitiesPageDom.find('ul')
     const files = mockData.allMarkdownRemark.edges

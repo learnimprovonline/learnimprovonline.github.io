@@ -3,7 +3,6 @@ import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
 import Link from 'gatsby-link'
 import ActivityPage, { NewDurationDisplayText } from '../../src/templates/activity-page'
-import { DurationDisplay } from '../../src/templates/activity-page'
 
 const mockData = {
   markdownRemark: {

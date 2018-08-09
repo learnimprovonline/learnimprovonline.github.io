@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Focus Page renders itself as expected 1`] = `
-<div>
+<div
+  className="container"
+>
   <h1>
     Activity Focus
   </h1>
@@ -12,12 +14,6 @@ exports[`Focus Page renders itself as expected 1`] = `
     to="/activities/"
   >
     Activities
-  </GatsbyLink>
-  <br />
-  <GatsbyLink
-    to="/"
-  >
-    Go to Home
   </GatsbyLink>
   <hr />
   <dl>
