@@ -34,20 +34,29 @@ exports[`Header renders itself correctly 1`] = `
               <li
                 className="header-nav-list-item"
               >
-                <a
-                  href="#features"
+                <GatsbyLink
+                  to="/activities"
                 >
-                  Features
-                </a>
+                  Activities
+                </GatsbyLink>
               </li>
               <li
                 className="header-nav-list-item"
               >
-                <a
-                  href="#howto"
+                <GatsbyLink
+                  to="/faq"
                 >
-                  How To
-                </a>
+                  FAQ
+                </GatsbyLink>
+              </li>
+              <li
+                className="header-nav-list-item"
+              >
+                <GatsbyLink
+                  to="/contact"
+                >
+                  Contact
+                </GatsbyLink>
               </li>
             </ul>
           </nav>

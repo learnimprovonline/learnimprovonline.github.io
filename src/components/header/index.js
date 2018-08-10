@@ -1,7 +1,7 @@
-import React from 'react';
-import Link from 'gatsby-link';
+import React from 'react'
+import Link from 'gatsby-link'
 
-import './_header.scss';
+import './_header.scss'
 
 const Header = ({ children }) =>
   (<header className="header">
@@ -15,10 +15,13 @@ const Header = ({ children }) =>
             <nav className="header-nav">
               <ul className="header-nav-list">
                 <li className="header-nav-list-item">
-                  <a href="#features">Features</a>
+                  <Link to="/activities">Activities</Link>
                 </li>
                 <li className="header-nav-list-item">
-                  <a href="#howto">How To</a>
+                  <Link to="/faq">FAQ</Link>
+                </li>
+                <li className="header-nav-list-item">
+                  <Link to="/contact">Contact</Link>
                 </li>
               </ul>
             </nav>
@@ -26,6 +29,6 @@ const Header = ({ children }) =>
         </div>
       </div>
     </div>
-  </header>);
+  </header>)
 
-export default Header;
+export default Header
