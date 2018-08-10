@@ -5,24 +5,24 @@ import Link from 'gatsby-link'
 import IndexPage from '../../src/pages/index'
 
 const mockData = {
-  "allDataJson": {
-    "edges": [
+  allDataJson: {
+    edges: [
       {
-        "node": {
-          "features": [
+        node: {
+          features: [
             {
-              "title": "Basic configuration and folder structure"
+              title: 'Basic configuration and folder structure',
             },
           ],
-          "howTo": [
+          howTo: [
             {
-              "title": "Prepare a coffee"
+              title: 'Prepare a coffee',
             },
-          ]
-        }
-      }
-    ]
-  }
+          ],
+        },
+      },
+    ],
+  },
 }
 
 const IndexPageDom = shallow(<IndexPage data={mockData} />)

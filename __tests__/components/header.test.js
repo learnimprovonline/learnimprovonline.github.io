@@ -7,7 +7,6 @@ import Header from '../../src/components/header'
 const HeaderDom = shallow(<Header>{'Site Name'}</Header>)
 
 describe('Header', () => {
-
   describe('Site Title', () => {
     const siteTitle = HeaderDom.find('.header-logo')
     const titleLink = siteTitle.find(Link)

@@ -3,8 +3,8 @@ import Link from 'gatsby-link'
 
 import './_header.scss'
 
-const Header = ({ children }) =>
-  (<header className="header">
+const Header = ({ children }) => (
+  <header className="header">
     <div className="container">
       <div className="row">
         <div className="col-12">
@@ -29,6 +29,7 @@ const Header = ({ children }) =>
         </div>
       </div>
     </div>
-  </header>)
+  </header>
+)
 
 export default Header

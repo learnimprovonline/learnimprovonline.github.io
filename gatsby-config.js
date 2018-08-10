@@ -1,5 +1,5 @@
-const pixrem = require('pixrem');
-const autoprefixer = require('autoprefixer');
+const pixrem = require('pixrem')
+const autoprefixer = require('autoprefixer')
 
 module.exports = {
   siteMetadata: {
@@ -19,11 +19,11 @@ module.exports = {
         postCssPlugins: [
           pixrem(),
           autoprefixer({
-            browsers: ['last 2 versions']
-          })
+            browsers: ['last 2 versions'],
+          }),
         ],
-        precision: 8
-      }
+        precision: 8,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,

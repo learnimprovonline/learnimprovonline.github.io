@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-import './_features.scss';
+import './_features.scss'
 
-const NewsListing = props =>
-  (<section className="features" id="features">
+const NewsListing = props => (
+  <section className="features" id="features">
     <div className="container">
       <div className="row">
         <div className="col-12">
@@ -13,15 +13,16 @@ const NewsListing = props =>
       <div className="row">
         <div className="col-12">
           <ul className="features-list">
-            {props.data.map((item, i) =>
-              (<li className="features-list-item" key={i}>
+            {props.data.map((item, i) => (
+              <li className="features-list-item" key={i}>
                 {item.title}
-              </li>),
-            )}
+              </li>
+            ))}
           </ul>
         </div>
       </div>
     </div>
-  </section>);
+  </section>
+)
 
-export default NewsListing;
+export default NewsListing

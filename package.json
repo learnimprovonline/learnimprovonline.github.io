@@ -16,7 +16,9 @@
     "activities:gen": "npm run activities:del && npm run activities:cpy && node ./content/activities/replace-tokens.js",
     "test": "jest",
     "test:watch": "jest --watchAll --verbose",
-    "test:snapshots": "jest --updateSnapshot"
+    "test:snapshots": "jest --updateSnapshot",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write {src,content,__{tests,mocks}__}/**/*.js",
+    "format:config": "prettier --trailing-comma es5 --no-semi --single-quote --write *.js"
   },
   "author": "Luke Dodge <luke@learnimprovonline.com>",
   "license": "MIT",
@@ -26,6 +28,7 @@
     "debug": "^3.1.0",
     "express": "^4.16.2",
     "helmet": "^3.10.0",
+    "prettier": "^1.14.2",
     "serve-static": "^1.13.1"
   },
   "devDependencies": {

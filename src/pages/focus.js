@@ -3,8 +3,8 @@ import Link from 'gatsby-link'
 
 const foci = require('../data/focus/foci.json')
 
-const FocusPage = () =>
-  (<div className="container">
+const FocusPage = () => (
+  <div className="container">
     <h1>Activity Focus</h1>
     <p>Skill or technique used to make a performance better and more fun.</p>
     <Link to="/activities/">Activities</Link>
@@ -17,6 +17,7 @@ const FocusPage = () =>
         </div>
       ))}
     </dl>
-  </div>);
+  </div>
+)
 
 export default FocusPage

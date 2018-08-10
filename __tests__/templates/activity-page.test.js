@@ -2,7 +2,9 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
 import Link from 'gatsby-link'
-import ActivityPage, { NewDurationDisplayText } from '../../src/templates/activity-page'
+import ActivityPage, {
+  NewDurationDisplayText,
+} from '../../src/templates/activity-page'
 
 const mockData = {
   markdownRemark: {
@@ -11,9 +13,9 @@ const mockData = {
       type: 'Activity Type',
       foci: ['Focus One', 'Focus Two'],
       minimumPeople: 3,
-      duration: 4
-    }
-  }
+      duration: 4,
+    },
+  },
 }
 
 describe('Activity Page Template', () => {
@@ -62,7 +64,6 @@ describe('Activity Page Template', () => {
     })
 
     describe('Duration List Item', () => {
-
       test('should have display text of "Duration"', () => {
         const termText = terms.at(3).text()
 

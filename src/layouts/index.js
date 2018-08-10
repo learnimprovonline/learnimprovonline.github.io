@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
-import Header from '../components/header';
-import Footer from '../components/footer';
-import { graphql } from 'graphql';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
+import Header from '../components/header'
+import Footer from '../components/footer'
+import { graphql } from 'graphql'
 
-import '../../sass/style.scss';
+import '../../sass/style.scss'
 
 const TemplateWrapper = ({ children, data }) => (
   <div>
@@ -20,14 +20,14 @@ const TemplateWrapper = ({ children, data }) => (
     {children()}
     <Footer />
   </div>
-);
+)
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func,
   data: PropTypes.object,
-};
+}
 
-export default TemplateWrapper;
+export default TemplateWrapper
 
 export const query = graphql`
   query HeaderQuery {
@@ -39,4 +39,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

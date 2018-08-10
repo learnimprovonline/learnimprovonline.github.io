@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from 'gatsby-link';
-import { graphql } from 'graphql';
+import React from 'react'
+import Link from 'gatsby-link'
+import { graphql } from 'graphql'
 
 const ActivitesPage = props => (
   <div className="container">
@@ -20,15 +20,13 @@ const ActivitesPage = props => (
       ))}
     </ul>
   </div>
-);
+)
 
-export default ActivitesPage;
+export default ActivitesPage
 
 export const query = graphql`
   query ActivityList {
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___title], order: ASC}
-    ) {
+    allMarkdownRemark(sort: { fields: [frontmatter___title], order: ASC }) {
       edges {
         node {
           frontmatter {
@@ -43,4 +41,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

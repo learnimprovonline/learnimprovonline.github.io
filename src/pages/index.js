@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'gatsby-link';
-import { graphql } from 'graphql';
-import Features from '../components/features';
-import HowTo from '../components/how-to';
+import React from 'react'
+import Link from 'gatsby-link'
+import { graphql } from 'graphql'
+import Features from '../components/features'
+import HowTo from '../components/how-to'
 
-const IndexPage = ({ data }) =>
-  (<div className="container">
+const IndexPage = ({ data }) => (
+  <div className="container">
     <h1>Early Access Alpha</h1>
     <p>
       Welcome to the future of learning improv. This early access preview gives
@@ -18,9 +18,10 @@ const IndexPage = ({ data }) =>
 
     <Features data={data.allDataJson.edges[0].node.features} />
     <HowTo data={data.allDataJson.edges[0].node.howTo} />
-  </div>);
+  </div>
+)
 
-export default IndexPage;
+export default IndexPage
 
 export const pageQuery = graphql`
   query IndexQuery {
@@ -37,4 +38,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

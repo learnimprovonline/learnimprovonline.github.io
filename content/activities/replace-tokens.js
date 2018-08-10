@@ -4,8 +4,8 @@ const conventions = require('./conventions.json')
 const from = []
 const to = []
 
-conventions.forEach((convention) => {
-  const token = new RegExp(`{{ ${convention.name} }}`,"g");
+conventions.forEach(convention => {
+  const token = new RegExp(`{{ ${convention.name} }}`, 'g')
   from.push(token)
   to.push(convention.verbiage)
 })
@@ -16,8 +16,8 @@ const options = {
   files: 'src/data/activities/*.md',
   from: from,
   to: to,
-};
+}
 
-const changes = replace.sync(options);
+const changes = replace.sync(options)
 
-console.log(changes);
+console.log(changes)
