@@ -1,68 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header renders itself correctly 1`] = `
-<header
-  className="header"
+<nav
+  class="navbar navbar-expand-lg navbar-dark bg-dark"
 >
   <div
-    className="container"
+    class="container"
   >
+    <GatsbyLink
+      className="navbar-brand"
+      to="/"
+    >
+      Site Name
+    </GatsbyLink>
+    <button
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      class="navbar-toggler"
+      data-target="#navbarNavAltMarkup"
+      data-toggle="collapse"
+      type="button"
+    >
+      <span
+        class="navbar-toggler-icon"
+      />
+    </button>
     <div
-      className="row"
+      class="collapse navbar-collapse"
+      id="navbarNavAltMarkup"
     >
       <div
-        className="col-12"
+        class="navbar-nav"
       >
-        <div
-          className="header-content"
+        <GatsbyLink
+          className="nav-item nav-link"
+          to="/activities"
         >
-          <span
-            className="header-logo"
-          >
-            <GatsbyLink
-              to="/"
-            >
-              Site Name
-            </GatsbyLink>
-          </span>
-          <nav
-            className="header-nav"
-          >
-            <ul
-              className="header-nav-list"
-            >
-              <li
-                className="header-nav-list-item"
-              >
-                <GatsbyLink
-                  to="/activities"
-                >
-                  Activities
-                </GatsbyLink>
-              </li>
-              <li
-                className="header-nav-list-item"
-              >
-                <GatsbyLink
-                  to="/faq"
-                >
-                  FAQ
-                </GatsbyLink>
-              </li>
-              <li
-                className="header-nav-list-item"
-              >
-                <GatsbyLink
-                  to="/contact"
-                >
-                  Contact
-                </GatsbyLink>
-              </li>
-            </ul>
-          </nav>
-        </div>
+          Activities
+        </GatsbyLink>
+        <GatsbyLink
+          className="nav-item nav-link"
+          to="/faq"
+        >
+          FAQ
+        </GatsbyLink>
+        <GatsbyLink
+          className="nav-item nav-link"
+          to="/contact"
+        >
+          Contact
+        </GatsbyLink>
       </div>
     </div>
   </div>
-</header>
+</nav>
 `;

@@ -8,8 +8,7 @@ const HeaderDom = shallow(<Header>{'Site Name'}</Header>)
 
 describe('Header', () => {
   describe('Site Title', () => {
-    const siteTitle = HeaderDom.find('.header-logo')
-    const titleLink = siteTitle.find(Link)
+    const titleLink = HeaderDom.find('.navbar-brand')
 
     test('link goes to the main page', () => {
       const rootDestination = '/'
@@ -26,14 +25,14 @@ describe('Header', () => {
   })
 
   describe('Navigation', () => {
-    const navigationItems = HeaderDom.find('.header-nav-list-item')
+    const navigationItems = HeaderDom.find(Link)
 
     test('should have three navigation items', () => {
-      expect(navigationItems).toHaveLength(3)
+      expect(navigationItems).toHaveLength(4)
     })
 
     describe('Activities', () => {
-      const activitiesLink = navigationItems.at(0).find(Link)
+      const activitiesLink = navigationItems.at(1)
 
       test('link goes to Activities page', () => {
         const activitesPageDestination = '/activities'
@@ -49,7 +48,7 @@ describe('Header', () => {
     })
 
     describe('FAQ', () => {
-      const faqLink = navigationItems.at(1).find(Link)
+      const faqLink = navigationItems.at(2)
 
       test('link goes to FAQ page', () => {
         const faqPageDestination = '/faq'
@@ -65,7 +64,7 @@ describe('Header', () => {
     })
 
     describe('Contact', () => {
-      const contactLink = navigationItems.at(2).find(Link)
+      const contactLink = navigationItems.at(3)
 
       test('link goes to Contact page', () => {
         const contactPageDestination = '/contact'
