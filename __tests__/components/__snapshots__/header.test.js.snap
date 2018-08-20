@@ -2,10 +2,10 @@
 
 exports[`Header renders itself correctly 1`] = `
 <nav
-  class="navbar navbar-expand-lg navbar-dark bg-dark"
+  className="navbar navbar-expand-lg navbar-dark bg-dark"
 >
   <div
-    class="container"
+    className="container"
   >
     <GatsbyLink
       className="navbar-brand"
@@ -17,21 +17,21 @@ exports[`Header renders itself correctly 1`] = `
       aria-controls="navbarNavAltMarkup"
       aria-expanded="false"
       aria-label="Toggle navigation"
-      class="navbar-toggler"
+      className="navbar-toggler"
       data-target="#navbarNavAltMarkup"
       data-toggle="collapse"
       type="button"
     >
       <span
-        class="navbar-toggler-icon"
+        className="navbar-toggler-icon"
       />
     </button>
     <div
-      class="collapse navbar-collapse"
+      className="collapse navbar-collapse"
       id="navbarNavAltMarkup"
     >
       <div
-        class="navbar-nav"
+        className="navbar-nav mr-auto"
       >
         <GatsbyLink
           className="nav-item nav-link"
@@ -52,6 +52,22 @@ exports[`Header renders itself correctly 1`] = `
           Contact
         </GatsbyLink>
       </div>
+      <form
+        className="form-inline"
+      >
+        <input
+          aria-label="Search"
+          className="form-control mr-sm-2"
+          placeholder="Search"
+          type="search"
+        />
+        <button
+          className="btn btn-outline-primary my-2 my-sm-0"
+          type="submit"
+        >
+          Search
+        </button>
+      </form>
     </div>
   </div>
 </nav>
