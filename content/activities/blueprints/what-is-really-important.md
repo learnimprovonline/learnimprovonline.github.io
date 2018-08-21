@@ -1,5 +1,5 @@
 ---
-title:  "What is Really Important?"
+title: "What is Really Important?"
 type: Exercise
 foci:
   - Observation

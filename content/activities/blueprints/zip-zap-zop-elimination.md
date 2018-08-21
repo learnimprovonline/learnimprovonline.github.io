@@ -1,5 +1,5 @@
 ---
-title:  "Zip Zap Zop Elimination"
+title: "Zip Zap Zop Elimination"
 type: Warmup
 foci:
   - Energy

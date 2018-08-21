@@ -1,5 +1,5 @@
 ---
-title:  "Patterns"
+title: "Patterns"
 type: Warmup
 foci:
   - Observation

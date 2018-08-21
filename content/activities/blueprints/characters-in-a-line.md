@@ -1,5 +1,5 @@
 ---
-title:  "Characters in a Line"
+title: "Characters in a Line"
 type: Exercise
 foci:
   - Character

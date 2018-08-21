@@ -1,5 +1,5 @@
 ---
-title:  "Scream"
+title: "Scream"
 type: Warmup
 foci:
   - Group Mind

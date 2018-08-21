@@ -1,5 +1,5 @@
 ---
-title:  "Actor Switch"
+title: "Actor Switch"
 type: Exercise
 foci:
   - Relationship

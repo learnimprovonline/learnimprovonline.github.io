@@ -1,5 +1,5 @@
 ---
-title:  "Descriptive Character Jump-start"
+title: "Descriptive Character Jump-start"
 type: Exercise
 foci:
   - Character

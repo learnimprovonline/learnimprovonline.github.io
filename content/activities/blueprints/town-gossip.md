@@ -1,5 +1,5 @@
 ---
-title:  "Town Gossip"
+title: "Town Gossip"
 type: Exercise
 foci:
   - Observation

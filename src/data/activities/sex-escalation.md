@@ -1,5 +1,5 @@
 ---
-title:  "Sex Escalation"
+title: "Sex Escalation"
 type: Exercise
 foci:
   - Growth

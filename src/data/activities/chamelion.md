@@ -1,5 +1,5 @@
 ---
-title:  "Chameleon"
+title: "Chameleon"
 type: Exercise
 foci:
   - Character

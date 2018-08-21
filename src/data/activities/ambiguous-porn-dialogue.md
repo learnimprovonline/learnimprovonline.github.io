@@ -1,5 +1,5 @@
 ---
-title:  "Ambiguous Porn Dialogue"
+title: "Ambiguous Porn Dialogue"
 type: Warmup
 foci:
   - Humor

@@ -1,5 +1,5 @@
 ---
-title:  "Grows / Glows"
+title: "Grows / Glows"
 type: Warmup
 foci:
   - Growth

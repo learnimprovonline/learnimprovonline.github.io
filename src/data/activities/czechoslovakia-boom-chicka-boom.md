@@ -1,5 +1,5 @@
 ---
-title:  "Czechoslovakia Boom Chicka Boom"
+title: "Czechoslovakia Boom Chicka Boom"
 type: Warmup
 foci:
   - Energy

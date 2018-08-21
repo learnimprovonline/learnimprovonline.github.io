@@ -1,5 +1,5 @@
 ---
-title:  "Scene Directors"
+title: "Scene Directors"
 type: Exercise
 foci:
   - Growth

@@ -1,5 +1,5 @@
 ---
-title:  "Five Through a Door"
+title: "Five Through a Door"
 type: Exercise
 foci:
   - Character

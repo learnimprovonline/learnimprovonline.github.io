@@ -1,5 +1,5 @@
 ---
-title:  "Say What You See"
+title: "Say What You See"
 type: Exercise
 foci:
   - Environment

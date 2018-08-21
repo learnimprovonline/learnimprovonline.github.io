@@ -1,5 +1,5 @@
 ---
-title:  "Doug"
+title: "Doug"
 type: Exercise
 foci:
   - Environment

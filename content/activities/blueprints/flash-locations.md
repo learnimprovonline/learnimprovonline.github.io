@@ -1,5 +1,5 @@
 ---
-title:  "Flash Locations"
+title: "Flash Locations"
 type: Exercise
 foci:
   - Environment

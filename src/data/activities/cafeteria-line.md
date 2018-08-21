@@ -1,5 +1,5 @@
 ---
-title:  "Cafeteria Line"
+title: "Cafeteria Line"
 type: Exercise
 foci:
   - Observation

@@ -1,5 +1,5 @@
 ---
-title:  "I, You, We"
+title: "I, You, We"
 type: Exercise
 foci:
   - Relationship

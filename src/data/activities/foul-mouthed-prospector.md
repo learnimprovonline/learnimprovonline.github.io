@@ -1,5 +1,5 @@
 ---
-title:  "Foul Mouthed Prospector"
+title: "Foul Mouthed Prospector"
 type: Exercise
 foci:
   - Support

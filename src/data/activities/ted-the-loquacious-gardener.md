@@ -1,5 +1,5 @@
 ---
-title:  "Ted the Loquacious Gardener"
+title: "Ted the Loquacious Gardener"
 type: Exercise
 foci:
   - Character

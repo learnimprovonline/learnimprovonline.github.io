@@ -1,5 +1,5 @@
 ---
-title:  "Zip Zap Zop"
+title: "Zip Zap Zop"
 type: Warmup
 foci:
   - Energy

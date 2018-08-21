@@ -1,5 +1,5 @@
 ---
-title:  "Blank-iest Blank"
+title: "Blank-iest Blank"
 type: Exercise
 foci:
   - Character

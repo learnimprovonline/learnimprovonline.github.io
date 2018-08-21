@@ -1,5 +1,5 @@
 ---
-title:  "Sixty Seconds Versus Five Seconds"
+title: "Sixty Seconds Versus Five Seconds"
 type: Exercise
 foci:
   - Content

@@ -1,5 +1,5 @@
 ---
-title:  "Voice Chair / Body Chair"
+title: "Voice Chair / Body Chair"
 type: Exercise
 foci:
   - Character
