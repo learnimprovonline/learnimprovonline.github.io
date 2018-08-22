@@ -1,17 +1,21 @@
 {
     "extends": "airbnb",
-    "rules":
-    {
+    "rules": {
         "react/jsx-filename-extension": "off",
         "react/prop-types": "off",
         "react/require-default-props": "off",
         "jsx-a11y/href-no-hash": "off",
         "class-methods-use-this": "off",
         "import/no-extraneous-dependencies": "on",
-        "semi": "never",
-        "jsx-a11y/anchor-is-valid": ["warn",
-        {
-            "aspects": ["invalidHref"]
-        }]
+        "semi": 0,
+        "linebreak-style": "off",
+        "jsx-a11y/anchor-is-valid": [
+            "warn",
+            {
+                "aspects": [
+                    "invalidHref"
+                ]
+            }
+        ]
     }
 }
