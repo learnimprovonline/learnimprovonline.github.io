@@ -1,7 +1,6 @@
 /* eslint-env jest */
 import React from 'react'
 import { shallow } from 'enzyme'
-import toJson from 'enzyme-to-json'
 import Link from 'gatsby-link'
 import IndexPage from '../../src/pages/index'
 
@@ -58,11 +57,5 @@ describe('Index Page', () => {
 
       expect(activitiesLinkDestination).toEqual(activitiesPageDestination)
     })
-  })
-
-  test('renders itself', () => {
-    const tree = toJson(IndexPageDom)
-
-    expect(tree).toMatchSnapshot()
   })
 })
