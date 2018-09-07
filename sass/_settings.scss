@@ -3,3 +3,7 @@ $color_border: #e3e3e3;
 $color_text: #505457;
 $color_light_text: #7f8a8e;
 $color_dark_text: #494d51;
+
+$footer_height: 120px;
+$header_height: 62px;
+$content_offset: $footer_height + $header_height;

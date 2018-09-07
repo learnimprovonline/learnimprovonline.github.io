@@ -1,3 +1,5 @@
+@import '../../sass/settings';
+
 .body-content-height {
-  min-height: calc(100vh - 182px);
+  min-height: calc(100vh - #{$content_offset});
 }
