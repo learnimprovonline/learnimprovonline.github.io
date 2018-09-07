@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import { graphql } from 'graphql'
 import Header from '../components/header'
 import Footer from '../components/footer'
-import { graphql } from 'graphql'
 
 import '../../sass/style.scss'
+import './_layouts.scss'
 
 const TemplateWrapper = ({ children, data }) => (
   <div>
@@ -17,14 +18,25 @@ const TemplateWrapper = ({ children, data }) => (
       ]}
     />
     <Header>{data.site.siteMetadata.title}</Header>
-    {children()}
+    <div className="body-content-height">
+      {children()}
+    </div>
+
     <Footer />
   </div>
 )
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func,
-  data: PropTypes.object,
+  data: PropTypes.shape({
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.shape({
+        title: PropTypes.string,
+        description: PropTypes.string,
+        keywords: PropTypes.string,
+      }),
+    }),
+  }),
 }
 
 export default TemplateWrapper
