@@ -1,8 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
+// eslint-disable-next-line no-unused-vars
 import bootstrap from 'bootstrap'
-
-import './_header.scss'
 
 const Header = ({ children }) => (
   <nav className="navbar navbar-expand-lg navbar-dark bg-dark">

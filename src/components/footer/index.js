@@ -1,7 +1,8 @@
 import React from 'react'
+// eslint-disable-next-line no-unused-vars
+import bootstrap from 'bootstrap'
 import Icon from '../icon'
 import Github from '../icon/github.icon'
-import './_footer.scss'
 
 const Footer = () => (
   <footer className="footer">

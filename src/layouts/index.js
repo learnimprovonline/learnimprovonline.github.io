@@ -21,7 +21,6 @@ const TemplateWrapper = ({ children, data }) => (
     <div className="body-content-height">
       {children()}
     </div>
-
     <Footer />
   </div>
 )
