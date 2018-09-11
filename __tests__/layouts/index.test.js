@@ -1,6 +1,6 @@
+/* eslint-env jest */
 import React from 'react'
 import { shallow } from 'enzyme'
-import toJson from 'enzyme-to-json'
 import Helmet from 'react-helmet'
 import TemplateWrapper from '../../src/layouts'
 import Header from '../../src/components/header'
@@ -19,7 +19,7 @@ const mockData = {
 }
 
 const LayoutDom = shallow(
-  <TemplateWrapper data={mockData}>{mockChildren}</TemplateWrapper>
+  <TemplateWrapper data={mockData}>{mockChildren}</TemplateWrapper>,
 )
 const helmet = LayoutDom.find(Helmet)
 
@@ -65,11 +65,5 @@ describe('Index Layout', () => {
 
   test('renders children', () => {
     expect(mockChildren.mock.calls.length).toEqual(1)
-  })
-
-  test('renders itself', () => {
-    const tree = toJson(LayoutDom)
-
-    expect(tree).toMatchSnapshot()
   })
 })
