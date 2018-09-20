@@ -4,6 +4,7 @@ import { shallow } from 'enzyme'
 import Helmet from 'react-helmet'
 import TemplateWrapper from '../../src/layouts'
 import Header from '../../src/components/header'
+import Footer from '../../src/components/footer'
 
 const mockChildren = jest.fn()
 mockChildren.mockReturnValue(<div>Children</div>)
@@ -18,13 +19,58 @@ const mockData = {
   },
 }
 
-const LayoutDom = shallow(
-  <TemplateWrapper data={mockData}>{mockChildren}</TemplateWrapper>,
-)
-const helmet = LayoutDom.find(Helmet)
-
 describe('Index Layout', () => {
+  const LayoutDom = shallow(
+    <TemplateWrapper data={mockData}>{mockChildren}</TemplateWrapper>,
+  )
+
+  test('has initial state', () => {
+    const expectedState = {
+      searchTerm: '',
+    }
+
+    expect(LayoutDom.instance().state).toEqual(expectedState)
+  })
+
+  describe('handleSearch', () => {
+    test('sets search term on state', () => {
+      const event = { target: { value: 'yes and' } }
+      const expectedState = {
+        searchTerm: 'yes and',
+      }
+      LayoutDom.instance().handleSearch(event)
+
+
+      expect(LayoutDom.instance().state).toEqual(expectedState)
+    })
+  })
+
+  describe('render', () => {
+    const state = { searchTerm: 'yes and' }
+
+    beforeAll(() => {
+      LayoutDom.setState(state)
+      mockChildren.mockClear()
+      LayoutDom.instance().render()
+    })
+
+    test('renders children', () => {
+      expect(mockChildren).toHaveBeenCalledTimes(1)
+    })
+
+    test('passes searchTerm to children', () => {
+      const expected = {
+        children: mockChildren,
+        data: mockData,
+        ...state,
+      }
+      expect(mockChildren).toHaveBeenCalledWith(expected)
+    })
+  })
+
   describe('Helmet', () => {
+    const helmet = LayoutDom.find(Helmet)
+
     test('title is populated from site data', () => {
       const helmetTitleText = helmet.prop('title')
       const siteTitle = mockData.site.siteMetadata.title
@@ -54,16 +100,23 @@ describe('Index Layout', () => {
   })
 
   describe('Header', () => {
-    test('Layout contains a Header with the site title', () => {
-      const header = LayoutDom.find(Header)
+    const header = LayoutDom.find(Header)
+
+    test('has display text of site title', () => {
       const headerText = header.children().text()
       const siteTitle = mockData.site.siteMetadata.title
 
       expect(headerText).toEqual(siteTitle)
     })
+
+    test('handleSearch prop set to handleSearch class function', () => {
+      expect(header.props().handleSearch).toBe(LayoutDom.instance().handleSearch)
+    })
   })
 
-  test('renders children', () => {
-    expect(mockChildren.mock.calls.length).toEqual(1)
+  describe('Footer', () => {
+    const footer = LayoutDom.find(Footer)
+
+    expect(footer).toHaveLength(1)
   })
 })

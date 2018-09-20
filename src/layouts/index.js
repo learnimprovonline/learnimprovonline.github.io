@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { graphql } from 'graphql'
@@ -8,22 +8,42 @@ import Footer from '../components/footer'
 import '../../sass/style.scss'
 import './_layouts.scss'
 
-const TemplateWrapper = ({ children, data }) => (
-  <div>
-    <Helmet
-      title={data.site.siteMetadata.title}
-      meta={[
-        { name: 'description', content: data.site.siteMetadata.description },
-        { name: 'keywords', content: data.site.siteMetadata.keywords },
-      ]}
-    />
-    <Header>{data.site.siteMetadata.title}</Header>
-    <div className="body-content-height">
-      {children()}
-    </div>
-    <Footer />
-  </div>
-)
+class TemplateWrapper extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      searchTerm: '',
+    }
+
+    this.handleSearch = this.handleSearch.bind(this)
+  }
+
+  handleSearch(event) {
+    const searchTerm = event.target.value
+    this.setState({ searchTerm })
+  }
+
+  render() {
+    const { children, data } = this.props
+
+    return (
+      <Fragment>
+        <Helmet
+          title={data.site.siteMetadata.title}
+          meta={[
+            { name: 'description', content: data.site.siteMetadata.description },
+            { name: 'keywords', content: data.site.siteMetadata.keywords },
+          ]}
+        />
+        <Header handleSearch={this.handleSearch}>{data.site.siteMetadata.title}</Header>
+        <div className="body-content-height">
+          {children({ ...this.props, ...this.state })}
+        </div>
+        <Footer />
+      </Fragment>
+    )
+  }
+}
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func,

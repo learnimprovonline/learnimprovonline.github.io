@@ -26,20 +26,34 @@ const elasticlunrSpy = jest.spyOn(Index, 'load')
 const indexSearchMock = jest.fn().mockReturnValue(mockSearchResults)
 const indexGetDocMock = jest.fn().mockReturnValue({ title: '' })
 
-const SearchPageDom = shallow(<SearchPage data={mockData} />)
+const SearchPageDom = shallow(<SearchPage data={mockData} searchTerm="yes and" />)
 SearchPageDom.instance().index.search = indexSearchMock
 SearchPageDom.instance().index.documentStore.getDoc = indexGetDocMock
 
 describe('Search Page', () => {
   test('has initial state', () => {
-    const resultsState = SearchPageDom.state().results
-    expect(resultsState).toEqual([])
+    const state = SearchPageDom.state()
+    const expectedInitialState = {
+      results: [],
+      searchTerm: 'yes and',
+    }
+    expect(state).toEqual(expectedInitialState)
   })
 
   test('has index created from props data', () => {
     const searchIndex = SearchPageDom.instance().index
     expect(searchIndex).toBeDefined()
     expect(elasticlunrSpy).toHaveBeenCalledWith(mockData.siteSearchIndex.index)
+  })
+
+  test('calls the search with search term from props on mount', () => {
+    const SearchPageMock = shallow(<SearchPage data={mockData} searchTerm="yes and" />)
+    const searchMock = jest.fn()
+    SearchPageMock.instance().search = searchMock
+    SearchPageMock.instance().componentWillMount()
+    const expectedEvent = { target: { value: 'yes and' } }
+
+    expect(searchMock).toHaveBeenCalledWith(expectedEvent)
   })
 
   describe('Input Field', () => {
@@ -56,26 +70,15 @@ describe('Search Page', () => {
 
   describe('Results', () => {
     describe('Heading', () => {
-      describe('when there are search results', () => {
-        beforeAll(() => {
-          SearchPageDom.setState({ results: ['thing1', 'thing2', 'thing3'] })
-        })
-
-        test('has display text of "Results"', () => {
-          const searchResultsHeading = SearchPageDom.find('h2')
-          const searchResultsHeadingText = searchResultsHeading.text()
-
-          expect(searchResultsHeadingText).toBe('Results')
-        })
+      beforeAll(() => {
+        SearchPageDom.setState({ results: ['thing1', 'thing2', 'thing3'] })
       })
 
-      describe('when there are no search restuls', () => {
-        test('has display text of "Results"', () => {
-          SearchPageDom.setState({ results: [] })
-          const searchResultsHeading = SearchPageDom.find('h2')
+      test('has display text of "Results"', () => {
+        const searchResultsHeading = SearchPageDom.find('h2')
+        const searchResultsHeadingText = searchResultsHeading.text()
 
-          expect(searchResultsHeading.exists()).toBe(false)
-        })
+        expect(searchResultsHeadingText).toBe('Results')
       })
     })
 

@@ -16,7 +16,13 @@ class SearchPage extends React.Component {
     this.index = Index.load(props.data.siteSearchIndex.index)
     this.state = {
       results: [],
+      searchTerm: props.searchTerm,
     }
+  }
+
+  componentWillMount() {
+    const event = { target: { value: this.state.searchTerm } }
+    this.search(event)
   }
 
   search(event) {
@@ -25,6 +31,7 @@ class SearchPage extends React.Component {
     const pageResults = searchResults.map(({ ref }) => this.index.documentStore.getDoc(ref))
     this.setState({
       results: pageResults,
+      searchTerm: query,
     })
   }
 
@@ -32,18 +39,16 @@ class SearchPage extends React.Component {
     return (<div className="container">
       <form>
         <h1>Search</h1>
-        <input type="text" className="form-control" onChange={this.search} />
+        <input type="text" className="form-control" onChange={this.search} value={this.state.searchTerm} />
       </form>
-      {this.state.results.length > 0 && <React.Fragment>
-        <h2>Results</h2>
-        <ol>
-          {this.state.results.map(page => (
-            <li>
-              {page.title}
-            </li>
-          ))}
-        </ol>
-      </React.Fragment>}
+      <h2>Results</h2>
+      {this.state.results.length > 0 && <ol>
+        {this.state.results.map(page => (
+          <li>
+            {page.title}
+          </li>
+        ))}
+      </ol>}
     </div>)
   }
 }

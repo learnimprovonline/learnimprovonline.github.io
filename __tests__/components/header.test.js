@@ -4,7 +4,8 @@ import { shallow } from 'enzyme'
 import Link from 'gatsby-link'
 import Header from '../../src/components/header'
 
-const HeaderDom = shallow(<Header>{'Site Name'}</Header>)
+const handleSearchMock = jest.fn()
+const HeaderDom = shallow(<Header handleSearch={handleSearchMock}>{'Site Name'}</Header>)
 
 describe('Header', () => {
   describe('Site Title', () => {
@@ -79,6 +80,38 @@ describe('Header', () => {
         const linkText = contactLink.children().text()
 
         expect(linkText).toEqual('Contact')
+      })
+    })
+  })
+
+  describe('Search Form', () => {
+    const searchForm = HeaderDom.find('form')
+
+    test('exists', () => {
+      expect(searchForm).toHaveLength(1)
+    })
+
+    describe('Input Field', () => {
+      const searchField = searchForm.find('input')
+
+      test('is type of Search', () => {
+        expect(searchField.props().type).toBe('search')
+      })
+
+      test('has onChange passed from props', () => {
+        expect(searchField.props().onChange).toBe(handleSearchMock)
+      })
+    })
+
+    describe('Search Button', () => {
+      const searchButton = searchForm.find(Link)
+
+      test('has Link destination of "/search"', () => {
+        expect(searchButton.props().to).toBe('/search')
+      })
+
+      test('has display text of "Search"', () => {
+        expect(searchButton.children().text()).toBe('Search')
       })
     })
   })
