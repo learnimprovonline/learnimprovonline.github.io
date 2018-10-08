@@ -36,15 +36,17 @@ class SearchPage extends React.Component {
   }
 
   render() {
+    const resultsCount = this.state.results.length
+
     return (<div className="container">
       <form>
         <h1>Search</h1>
         <input type="text" className="form-control" onChange={this.search} value={this.state.searchTerm} />
       </form>
       <h2>Results</h2>
-      {this.state.results.length > 0 && <ol>
+      {resultsCount > 0 && <ol>
         {this.state.results.map(page => (
-          <li>
+          <li key={page.title}>
             {page.title}
           </li>
         ))}
