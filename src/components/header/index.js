@@ -1,7 +1,13 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import Link, { navigateTo } from 'gatsby-link'
 // eslint-disable-next-line no-unused-vars
 import bootstrap from 'bootstrap'
+
+export const handleSubmit = (event) => {
+  event.preventDefault()
+  navigateTo('/search')
+  event.target.reset()
+}
 
 const Header = ({ children, handleSearch }) => (
   <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -16,7 +22,7 @@ const Header = ({ children, handleSearch }) => (
           <Link className="nav-item nav-link" to="/faq">FAQ</Link>
           <Link className="nav-item nav-link" to="/contact">Contact</Link>
         </div>
-        <form className="form-inline">
+        <form onSubmit={handleSubmit} className="form-inline">
           <input
             onChange={handleSearch}
             className="form-control mr-sm-2"
@@ -24,7 +30,7 @@ const Header = ({ children, handleSearch }) => (
             placeholder="Search"
             aria-label="Search"
           />
-          <Link className="btn btn-outline-primary my-2 my-sm-0" to="/search">Search</Link>
+          <button className="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
         </form>
       </div>
     </div>
