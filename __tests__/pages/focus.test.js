@@ -1,7 +1,6 @@
+/* eslint-env jest */
 import React from 'react'
 import { shallow } from 'enzyme'
-import toJson from 'enzyme-to-json'
-import Link from 'gatsby-link'
 import FocusPage from '../../src/pages/focus'
 
 jest.mock(
@@ -20,7 +19,7 @@ jest.mock(
       description: 'C',
     },
   ],
-  { virtual: true }
+  { virtual: true },
 )
 const mockFoci = require('../../src/data/focus/foci.json')
 
@@ -34,23 +33,6 @@ describe('Focus Page', () => {
       const pageHeadingText = pageHeading.children().text()
 
       expect(pageHeadingText).toEqual(pageTitle)
-    })
-  })
-
-  describe('Activity Page Link', () => {
-    const activitiesLink = FocusPageDom.find(Link).at(0)
-
-    test('display text is "Activities"', () => {
-      const activityLinkText = activitiesLink.children().text()
-
-      expect(activityLinkText).toEqual('Activities')
-    })
-
-    test('points to the Activity Page', () => {
-      const activityPagePath = '/activities/'
-      const activityLinkDestination = activitiesLink.prop('to')
-
-      expect(activityLinkDestination).toEqual(activityPagePath)
     })
   })
 
@@ -80,11 +62,5 @@ describe('Focus Page', () => {
         expect(definition).toEqual(mockFocus.description)
       })
     })
-  })
-
-  test('renders itself as expected', () => {
-    const tree = toJson(FocusPageDom)
-
-    expect(tree).toMatchSnapshot()
   })
 })

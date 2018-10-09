@@ -1,7 +1,6 @@
 /* eslint-env jest */
 import React from 'react'
 import { shallow } from 'enzyme'
-import Link from 'gatsby-link'
 import IndexPage from '../../src/pages/index'
 
 const mockData = {
@@ -35,27 +34,6 @@ describe('Index Page', () => {
       const pageHeadingText = pageHeading.children().text()
 
       expect(pageHeadingText).toEqual(pageTitle)
-    })
-  })
-
-  describe('Activities Link', () => {
-    const activitiesLink = IndexPageDom.find(Link)
-
-    test('exists', () => {
-      expect(activitiesLink).toHaveLength(1)
-    })
-
-    test('display text is "Go to Activities"', () => {
-      const activitiesLinkText = activitiesLink.children().text()
-
-      expect(activitiesLinkText).toEqual('Go to Activities')
-    })
-
-    test('points to the Activities Page', () => {
-      const activitiesPageDestination = '/activities/'
-      const activitiesLinkDestination = activitiesLink.prop('to')
-
-      expect(activitiesLinkDestination).toEqual(activitiesPageDestination)
     })
   })
 })

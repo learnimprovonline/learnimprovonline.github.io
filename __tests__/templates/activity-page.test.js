@@ -1,8 +1,6 @@
 /* eslint-env jest */
 import React from 'react'
 import { shallow } from 'enzyme'
-import toJson from 'enzyme-to-json'
-import Link from 'gatsby-link'
 import ActivityPage, {
   NewDurationDisplayText,
 } from '../../src/templates/activity-page'
@@ -79,29 +77,6 @@ describe('Activity Page Template', () => {
         expect(definitionText).toEqual(durationText)
       })
     })
-  })
-
-  describe('Activities Page Link', () => {
-    const activitiesLink = ActivityPageDom.find(Link)
-
-    test('display text is "Back to Activities"', () => {
-      const activitiesLinkText = activitiesLink.children().text()
-
-      expect(activitiesLinkText).toBe('Back to Activities')
-    })
-
-    test('points to the Activities Page', () => {
-      const activitiesLinkDestination = activitiesLink.prop('to')
-      const activitiesPageDestination = '/activities/'
-
-      expect(activitiesLinkDestination).toEqual(activitiesPageDestination)
-    })
-  })
-
-  test('renders itself as expected', () => {
-    const tree = toJson(ActivityPageDom)
-
-    expect(tree).toMatchSnapshot()
   })
 })
 
