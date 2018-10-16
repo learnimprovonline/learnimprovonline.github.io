@@ -3,8 +3,8 @@ import { graphql } from 'graphql'
 import Features from '../components/features'
 import HowTo from '../components/how-to'
 
-const IndexPage = ({ data }) => (
-  <div className="container">
+const IndexPage = ({ data }) =>
+  (<div className="container">
     <h1>Early Access Alpha</h1>
     <p>
       Welcome to the future of learning improv. This early access preview gives
@@ -17,7 +17,7 @@ const IndexPage = ({ data }) => (
     <Features data={data.allDataJson.edges[0].node.features} />
     <HowTo data={data.allDataJson.edges[0].node.howTo} />
   </div>
-)
+  )
 
 export default IndexPage
 
@@ -28,6 +28,8 @@ export const pageQuery = graphql`
         node {
           features {
             title
+            description
+            icon
           }
           howTo {
             title

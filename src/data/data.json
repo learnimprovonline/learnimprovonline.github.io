@@ -1,25 +1,19 @@
 {
     "features": [
         {
-            "title": "Basic configuration and folder structure"
+            "title": "Power Search",
+            "description": "Find activities and warm-ups based on your specific needs such as group size, available time, and focus points.",
+            "icon": "search"
         },
         {
-            "title": "Uses postcss and sass with autoprefixer"
+            "title": "Animated Instructionals",
+            "description": "Short narrated animations quickly explain the basics of any exercise so you can start practice faster.",
+            "icon": "video"
         },
         {
-            "title": "Uses Bootstrap 4"
-        },
-        {
-            "title": "Leaves the styling to you"
-        },
-        {
-            "title": "Uses data from local json files"
-        },
-        {
-            "title": "Contains Node.js server code for easy, secure, and fast hosting"
-        },
-        {
-            "title": "SVG sprites: Add your icons in `components/icon` as .icon files and use them."
+            "title": "Video Examples",
+            "description": "Watch how exercises and warm-ups are used in practice by experienced improvisers.",
+            "icon": "film"
         }
     ],
     "howTo": [

@@ -1,28 +1,32 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch, faVideo, faFilm } from '@fortawesome/free-solid-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core'
 
 import './_features.scss'
 
-const NewsListing = props => (
-  <section className="features" id="features">
-    <div className="container">
-      <div className="row">
-        <div className="col-12">
-          <h4 className="features-title">Features</h4>
+// TODO: Dynamic icon imports
+library.add([faSearch, faVideo, faFilm])
+
+const FeatureCards = props =>
+  (<section className="container">
+    <h4>Features</h4>
+    <div className="row">
+      {props.data.map(item => (
+        <div className="col-4" key={item.title}>
+          <Card icon={item.icon} title={item.title} description={item.description} />
         </div>
-      </div>
-      <div className="row">
-        <div className="col-12">
-          <ul className="features-list">
-            {props.data.map((item, i) => (
-              <li className="features-list-item" key={i}>
-                {item.title}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
+      ))}
     </div>
-  </section>
+  </section>)
+
+export const Card = props => (
+  <div className="card">
+    <div className="card-body">
+      <h5 className="card-title"><FontAwesomeIcon icon={props.icon} /> {props.title}</h5>
+      <p className="card-text">{props.description}</p>
+    </div>
+  </div>
 )
 
-export default NewsListing
+export default FeatureCards
