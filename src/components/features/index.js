@@ -13,7 +13,7 @@ const FeatureCards = props =>
     <h4>Features</h4>
     <div className="row">
       {props.data.map(item => (
-        <div className="col-4" key={item.title}>
+        <div className="col-sm" key={item.title}>
           <Card icon={item.icon} title={item.title} description={item.description} />
         </div>
       ))}
@@ -22,8 +22,8 @@ const FeatureCards = props =>
 
 export const Card = props => (
   <div className="card">
+    <div className="card-header"><FontAwesomeIcon icon={props.icon} /> {props.title}</div>
     <div className="card-body">
-      <h5 className="card-title"><FontAwesomeIcon icon={props.icon} /> {props.title}</h5>
       <p className="card-text">{props.description}</p>
     </div>
   </div>

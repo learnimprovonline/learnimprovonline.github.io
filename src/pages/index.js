@@ -24,7 +24,7 @@ const IndexPage = ({ data }) =>
     </p>
     <hr />
     <Features data={data.allDataJson.edges[0].node.features} />
-    <hr />
+
     <HowTo data={data.allDataJson.edges[0].node.howTo} />
   </div>
   )
