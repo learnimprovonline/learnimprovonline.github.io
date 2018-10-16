@@ -9,8 +9,8 @@ import './_features.scss'
 library.add([faSearch, faVideo, faFilm])
 
 const FeatureCards = props =>
-  (<section className="container">
-    <h4>Features</h4>
+  (<section>
+    <h3>Features</h3>
     <div className="row">
       {props.data.map(item => (
         <div className="col-sm" key={item.title}>

@@ -8,7 +8,7 @@ ActivitySearchIndexQuery {
       index
     }
 }`
-
+// TODO: Add links to search results
 class SearchPage extends React.Component {
   constructor(props) {
     super(props)

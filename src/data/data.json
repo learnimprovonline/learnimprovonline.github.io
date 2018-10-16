@@ -8,12 +8,12 @@
         {
             "title": "Animated Instructionals",
             "description": "Short narrated animations quickly explain the basics of any exercise so you can start practice faster.",
-            "icon": "video"
+            "icon": "film"
         },
         {
             "title": "Video Examples",
             "description": "Watch how exercises and warm-ups are used in practice by experienced improvisers.",
-            "icon": "film"
+            "icon": "video"
         }
     ],
     "howTo": [

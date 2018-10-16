@@ -14,7 +14,7 @@ describe('FeatureCards', () => {
   const FeatureDom = shallow(<FeatureCards data={mockData} />)
 
   test('has header with text "Features"', () => {
-    const header = FeatureDom.find('h4')
+    const header = FeatureDom.find('h3')
     expect(header).toHaveLength(1)
 
     const headerText = header.text()
@@ -40,7 +40,7 @@ describe('Card', () => {
   })
 
   test('has card title text from title props', () => {
-    const title = CardDom.find('h5')
+    const title = CardDom.find('.card-header')
     const titleText = title.childAt(2).text()
 
     expect(titleText).toBe('my title')
