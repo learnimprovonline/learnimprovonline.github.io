@@ -10,11 +10,11 @@ module.exports = {
     keywords: 'improv, learn improv, learn improv online',
   },
   plugins: [
-    `gatsby-plugin-react-next`,
-    `gatsby-plugin-react-helmet`,
-    `svgo`,
+    'gatsby-plugin-react-next',
+    'gatsby-plugin-react-helmet',
+    'svgo',
     {
-      resolve: `gatsby-plugin-postcss-sass`,
+      resolve: 'gatsby-plugin-postcss-sass',
       options: {
         postCssPlugins: [
           pixrem(),
@@ -26,13 +26,13 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `data`,
+        name: 'data',
         path: `${__dirname}/src/data/`,
       },
     },
-    `gatsby-transformer-json`,
+    'gatsby-transformer-json',
     'gatsby-transformer-remark',
     {
       resolve: 'gatsby-source-filesystem',
@@ -42,7 +42,7 @@ module.exports = {
       },
     },
     {
-      resolve: `@andrew-codes/gatsby-plugin-elasticlunr-search`,
+      resolve: '@andrew-codes/gatsby-plugin-elasticlunr-search',
       options: {
         // Fields to index
         fields: [
@@ -59,6 +59,7 @@ module.exports = {
             type: node => node.frontmatter.type,
             focus: node => node.frontmatter.foci,
             description: node => node.rawMarkdownBody,
+            slug: node => node.fields.slug,
           },
         },
       },

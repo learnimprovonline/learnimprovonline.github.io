@@ -1,13 +1,14 @@
 /* eslint-env jest */
 import React from 'react'
+import Link from 'gatsby-link'
 import { Index } from 'elasticlunr'
 import { shallow } from 'enzyme'
 import SearchPage from '../../src/pages/search'
 
 const mockSearchResults = [
-  { ref: { title: 'mock one' } },
-  { ref: { title: 'mock two' } },
-  { ref: { title: 'mock three' } },
+  { ref: { title: 'mock one', slug: 'slug one' } },
+  { ref: { title: 'mock two', slug: 'slug two' } },
+  { ref: { title: 'mock three', slug: 'slug three' } },
 ]
 
 const mockData = {
@@ -104,15 +105,24 @@ describe('Search Page', () => {
             listItems = resultsList.find('li')
           })
 
-          test('is one for each result', () => {
-            expect(listItems).toHaveLength(3)
+          test('has one for each result', () => {
+            expect(listItems).toHaveLength(state.results.length)
           })
 
-          test('has display text of page title', () => {
+          test('has link to page slug and display text of page title', () => {
             for (let index = 0; index < state.results.length; index += 1) {
-              const listItemText = listItems.at(index).text()
-              const listItemDisplay = state.results[index].title
-              expect(listItemText).toEqual(listItemDisplay)
+              const listItem = listItems.at(index)
+              const listLink = listItem.find(Link)
+
+              expect(listLink).toHaveLength(1)
+
+              const linkText = listLink.children().text()
+              const pageTitle = state.results[index].title
+              expect(linkText).toEqual(pageTitle)
+
+              const linkDestination = listLink.props().to
+              const pageSlug = state.results[index].slug
+              expect(linkDestination).toEqual(pageSlug)
             }
           })
         })
@@ -161,9 +171,9 @@ describe('Search Page', () => {
 
     test('sets state to the page results', () => {
       const pageResults = [
-        { title: 'mock one' },
-        { title: 'mock two' },
-        { title: 'mock three' },
+        { title: 'mock one', slug: 'slug one' },
+        { title: 'mock two', slug: 'slug two' },
+        { title: 'mock three', slug: 'slug three' },
       ]
 
       expect(SearchPageDom.instance().state.results).toEqual(pageResults)

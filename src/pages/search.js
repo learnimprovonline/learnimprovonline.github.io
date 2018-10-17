@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'gatsby-link'
 import { Index } from 'elasticlunr'
 import { graphql } from 'graphql'
 
@@ -8,7 +9,7 @@ ActivitySearchIndexQuery {
       index
     }
 }`
-// TODO: Add links to search results
+
 class SearchPage extends React.Component {
   constructor(props) {
     super(props)
@@ -47,7 +48,7 @@ class SearchPage extends React.Component {
       {resultsCount > 0 && <ol>
         {this.state.results.map(page => (
           <li key={page.title}>
-            {page.title}
+            <Link to={page.slug}>{page.title}</Link>
           </li>
         ))}
       </ol>}
