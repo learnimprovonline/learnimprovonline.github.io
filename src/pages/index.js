@@ -4,6 +4,19 @@ import Features from '../components/features'
 
 const IndexPage = ({ data }) =>
   (<div className="container">
+
+    <div className="jumbotron mt-4">
+      <h1 className="display-4">Improv Resources At Your Fingertips</h1>
+      <p className="lead">
+        Learn improv warm-ups and exercises through a variety of written descriptions,
+        animated instructionals, and video examples. Empowering you and your team the
+        ability to take yourself to the next level.
+      </p>
+      <hr className="my-4" />
+      <p>Join the waiting list for the beta. We&apos;ll keep you posted.</p>
+      <a className="btn btn-primary btn-lg" href="#" role="button">Sign Up</a>
+    </div>
+
     <div className="alert alert-info" role="alert">
       <h4 className="alert-heading">Early Access Alpha</h4>
       <p>
@@ -15,13 +28,6 @@ const IndexPage = ({ data }) =>
       <p>Now go do something great.</p>
     </div>
 
-    <h2>Improv Resources At Your Fingertips</h2>
-    <p>
-      Learn improv warm-ups and exercises through a variety of written descriptions,
-      animated instructionals, and video examples. Empowering you and your team the
-      ability to take yourself to the next level.
-    </p>
-    <hr />
     <section>
       <h3>High-Quality Content</h3>
       <p>
