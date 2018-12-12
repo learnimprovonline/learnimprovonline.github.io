@@ -6,6 +6,8 @@ foci:
   - Energy
 source: "Ashley Osborn"
 date: 2015-12-14
+alias:
+  - "Ah!!!"
 minimumPeople: 3
 duration: 5
 durationType: constant
