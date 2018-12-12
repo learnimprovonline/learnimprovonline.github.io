@@ -13,7 +13,7 @@ duration: 5
 durationType: constant
 ---
 {{ Circle Up }}
-Start by creating a set of linked identifiers following a theme (e.g. numbers, colors, animals, etc.).
+Start by creating a set of linked identifiers following a theme (i.e. numbers, colors, animals, etc.).
 To do this, point at a person who hasn't been pointed at yet and say something in line with the theme which has been created.
 The theme can either be stated ahead of time or created organically.
 For example, the first person says "cat," the second person says "dog," the third person says "fish," etc. with the established pattern being pets created by the second choice of "dog."
