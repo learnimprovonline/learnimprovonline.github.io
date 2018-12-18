@@ -12,6 +12,6 @@ duration: 3
 durationType: linear
 ---
 Players form two lines of equal length. Mix it up so players are not across from someone they've done senes with already.
-Two person scene with one straight character (left side), the other characterized by <adjective> <job> (right side).
+Two person scene with one straight character (left side), the other characterized by `<adjective>` `<job>` (right side).
 Adjective and job are suggestions.
 Players switch lines when he/she has completed a scene. Continue until every player has completed a scene from both lines.

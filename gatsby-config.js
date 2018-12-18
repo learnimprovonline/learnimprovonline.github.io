@@ -49,6 +49,7 @@ module.exports = {
           'title',
           'type',
           'focus',
+          'alias',
           'description',
         ],
         // How to resolve each field's value for a supported node type
