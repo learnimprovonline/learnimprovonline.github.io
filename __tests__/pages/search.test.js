@@ -3,12 +3,13 @@ import React from 'react';
 import Link from 'gatsby-link';
 import { Index } from 'elasticlunr';
 import { shallow } from 'enzyme';
-import SearchPage from '../../src/pages/search';
+
+import SearchPage, { SearchResult, SearchResultsList } from '../../src/pages/search';
 
 const mockSearchResults = [
-  { ref: { title: 'mock one', slug: 'slug one' } },
-  { ref: { title: 'mock two', slug: 'slug two' } },
-  { ref: { title: 'mock three', slug: 'slug three' } },
+  { ref: { title: 'mock one', slug: 'slug one', focus: ['s1'] } },
+  { ref: { title: 'mock two', slug: 'slug two', focus: ['s2'] } },
+  { ref: { title: 'mock three', slug: 'slug three', focus: ['s3'] } },
 ];
 
 const mockData = {
@@ -30,6 +31,120 @@ const indexGetDocMock = jest.fn().mockReturnValue({ title: '' });
 const SearchPageDom = shallow(<SearchPage data={mockData} searchTerm="yes and" />);
 SearchPageDom.instance().index.search = indexSearchMock;
 SearchPageDom.instance().index.documentStore.getDoc = indexGetDocMock;
+
+describe('SearchResult', () => {
+  const page = { slug: 'my slug', title: 'my title', type: 'my type', focus: ['a', 'b', 'c'] };
+  const activity = {
+    title: page.title,
+    type: page.type,
+    focus: page.focus,
+  };
+  const searchResult = shallow(<SearchResult slug={page.slug} activity={activity} />);
+
+  describe('Link', () => {
+    const link = searchResult.find(Link);
+
+    test('exists', () => {
+      expect(link).toHaveLength(1);
+    });
+
+    test('has "to" equal to props.slug', () => {
+      const to = link.props().to;
+
+      expect(to).toBe(page.slug);
+    });
+
+    test('has display text of props.title', () => {
+      const displayText = link.children().text();
+
+      expect(displayText).toBe(page.title);
+    });
+  });
+
+  describe('Badge', () => {
+    const badge = searchResult.find('span.badge');
+
+    test('exists', () => {
+      expect(badge).toHaveLength(1);
+    });
+
+    test('has "badge-info" class', () => {
+      expect(badge.hasClass('badge-info')).toBe(true);
+    });
+
+    test('has display text equal to props.type', () => {
+      const displayText = badge.children().text();
+
+      expect(displayText).toBe(page.type);
+    });
+  });
+
+  test('has display text equal to props.focus', () => {
+    const displayText = searchResult.childAt(3).text();
+    const focus = page.focus.join(', ');
+    const expectedDisplayText = ` ${focus}`;
+
+    expect(displayText).toEqual(expectedDisplayText);
+  });
+});
+
+describe('SearchResultsList', () => {
+  const results = [
+    { title: 'a', slug: 's1', type: 't1', focus: ['a1', 'a2', 'a3'] },
+    { title: 'b', slug: 's2', type: 't2', focus: ['b1', 'b2', 'b3'] },
+    { title: 'c', slug: 's3', type: 't3', focus: ['c1', 'c2', 'c3'] },
+  ];
+  const searchResultsList = shallow(<SearchResultsList results={results} />);
+
+  test('should be an ordered list', () => {
+    expect(searchResultsList.type()).toBe('ol');
+  });
+
+  describe('List Items', () => {
+    const listItems = searchResultsList.find('li');
+
+    test('total number equal to number of results', () => {
+      const resultCount = results.length;
+
+      expect(listItems).toHaveLength(resultCount);
+    });
+
+    test('"key" equal to the page title', () => {
+      listItems.forEach((listItem, index) => {
+        const key = listItem.key();
+        const pageTitle = results[index].title;
+
+        expect(key).toBe(pageTitle);
+      });
+    });
+
+    describe('SearchResult', () => {
+      const searchResult = listItems.at(0).find(SearchResult);
+
+      test('exists', () => {
+        expect(searchResult).toHaveLength(1);
+      });
+
+      test("'slug' equal to props.results.slug", () => {
+        const slug = searchResult.props().slug;
+        const expectedSlug = results[0].slug;
+
+        expect(slug).toEqual(expectedSlug);
+      });
+
+      test('activity', () => {
+        const activity = searchResult.props().activity;
+        const expectedActivity = {
+          title: results[0].title,
+          type: results[0].type,
+          focus: results[0].focus,
+        };
+
+        expect(activity).toEqual(expectedActivity);
+      });
+    });
+  });
+});
 
 describe('Search Page', () => {
   test('has initial state', () => {
@@ -83,66 +198,30 @@ describe('Search Page', () => {
       });
     });
 
-    describe('Results List', () => {
+    describe('SearchResultsList', () => {
       let resultsList;
       const state = {
         results: [
-          { title: 'thing1', type: 'Warmup' },
-          { title: 'thing2', type: 'Exercise' },
-          { title: 'thing3', type: 'Cooldown' },
+          { title: 'thing1', type: 'Warmup', focus: ['a', 'b', 'c'] },
+          { title: 'thing2', type: 'Exercise', focus: ['d', 'e', 'f'] },
+          { title: 'thing3', type: 'Cooldown', focus: ['g'] },
         ],
       };
 
       describe('when there are search results', () => {
         beforeAll(() => {
           SearchPageDom.setState(state);
-          resultsList = SearchPageDom.find('ol');
+          resultsList = SearchPageDom.find(SearchResultsList);
         });
 
         test('does exist', () => {
-          expect(resultsList.exists()).toBe(true);
+          expect(resultsList).toHaveLength(1);
         });
 
-        describe('List Items', () => {
-          let listItems;
-          beforeAll(() => {
-            listItems = resultsList.find('li');
-          });
+        test('"results" equal to state.results', () => {
+          const results = resultsList.props().results;
 
-          test('has one for each result', () => {
-            expect(listItems).toHaveLength(state.results.length);
-          });
-
-          // TODO: Break this test up
-          test('has link to page slug and display text of page title', () => {
-            for (let index = 0; index < state.results.length; index += 1) {
-              const listItem = listItems.at(index);
-              const listLink = listItem.find(Link);
-
-              expect(listLink).toHaveLength(1);
-
-              const linkText = listLink.children().text();
-              const pageTitle = state.results[index].title;
-              expect(linkText).toEqual(pageTitle);
-
-              const linkDestination = listLink.props().to;
-              const pageSlug = state.results[index].slug;
-              expect(linkDestination).toEqual(pageSlug);
-            }
-          });
-
-          test('has badge with display text of activity type', () => {
-            for (let index = 0; index < state.results.length; index += 1) {
-              const listItem = listItems.at(index);
-              const badge = listItem.find('span');
-
-              expect(badge).toHaveLength(1);
-
-              const badgeText = badge.text();
-              const activityType = state.results[index].type;
-              expect(badgeText).toEqual(activityType);
-            }
-          });
+          expect(results).toEqual(state.results);
         });
 
         afterAll(() => {
@@ -188,11 +267,7 @@ describe('Search Page', () => {
     });
 
     test('sets state to the page results', () => {
-      const pageResults = [
-        { title: 'mock one', slug: 'slug one' },
-        { title: 'mock two', slug: 'slug two' },
-        { title: 'mock three', slug: 'slug three' },
-      ];
+      const pageResults = mockSearchResults.map(searchResult => searchResult.ref);
 
       expect(SearchPageDom.instance().state.results).toEqual(pageResults);
     });

@@ -13,6 +13,39 @@ export const searchQuery = graphql`
   }
 `;
 
+export function SearchResult(props) {
+  const activity = props.activity;
+  const displayText = ` ${activity.focus.join(', ')}`;
+
+  return (
+    <span>
+      <Link to={props.slug}>{activity.title}</Link>{' '}
+      <span className="badge badge-info">{activity.type}</span>
+      {displayText}
+    </span>
+  );
+}
+
+export function SearchResultsList(props) {
+  const searchResults = props.results.map((page) => {
+    const activity = {
+      title: page.title,
+      type: page.type,
+      focus: page.focus,
+    };
+
+    return (
+      <li key={page.title}>
+        <SearchResult slug={page.slug} activity={activity} />
+      </li>
+    );
+  });
+
+  const searchResultsList = <ol>{searchResults}</ol>;
+
+  return searchResultsList;
+}
+
 class SearchPage extends React.Component {
   constructor(props) {
     super(props);
@@ -54,16 +87,7 @@ class SearchPage extends React.Component {
           />
         </form>
         <h2>Results</h2>
-        {resultsCount > 0 && (
-          <ol>
-            {this.state.results.map(page => (
-              <li key={page.title}>
-                <Link to={page.slug}>{page.title}</Link>{' '}
-                <span className="badge badge-info">{page.type}</span>
-              </li>
-            ))}
-          </ol>
-        )}
+        {resultsCount > 0 && <SearchResultsList results={this.state.results} />}
       </div>
     );
   }
