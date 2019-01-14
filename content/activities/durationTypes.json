@@ -1,0 +1,14 @@
+{
+  "constant": {
+    "name": "Constant",
+    "description": "Duration does not change based on the number of players."
+  },
+  "step": {
+    "name": "Step",
+    "description": "Duration increases for a set amount for each group of players."
+  },
+  "linear": {
+    "name": "Linear",
+    "description": "Duration increases a set amount for each individual player."
+  }
+}

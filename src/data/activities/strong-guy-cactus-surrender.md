@@ -11,7 +11,7 @@ duration: 3
 durationType: constant
 ---
 
-{{ Circle Up }}
+Players to stand in a circle with the order randomized using whatever method you prefer.
 Players turns around so no one is facing each other.
 Leader counts to three and everyone quickly turns around at the same time in one of the following poses:
 
