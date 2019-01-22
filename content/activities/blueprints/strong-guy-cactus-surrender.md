@@ -5,7 +5,7 @@ foci:
   - Observation
   - Group Mind
 source: "Michael Hudgens"
-date: 2015-05-16
+date: 2016-05-16
 minimumPeople: 3
 duration: 3
 durationType: constant
