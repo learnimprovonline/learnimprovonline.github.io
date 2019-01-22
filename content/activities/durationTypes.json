@@ -5,7 +5,8 @@
   },
   "step": {
     "name": "Step",
-    "description": "Duration increases for a set amount for each group of players."
+    "description": "Duration increases for a set amount for each group of players.",
+    "peoplePerScene": "Number of players per group."
   },
   "linear": {
     "name": "Linear",
