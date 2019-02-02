@@ -9,8 +9,9 @@ source: "Chris Stoker"
 date: 2015-08-29
 minimumPeople: 2
 duration: 10
-durationType: linear
+durationType: Linear
 ---
+
 {{ Form Two Lines }}
 Two person scene starts with the following sequence steps:
 

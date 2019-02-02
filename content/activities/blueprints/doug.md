@@ -9,9 +9,10 @@ source: "Laura Irwin"
 date: 2015-11-30
 minimumPeople: 3
 duration: 4
-durationType: step
+durationType: Step
 peoplePerScene: 3
 ---
+
 Three person scene with two people in the scene, the third off to the side as "Doug."
 Get a suggestion for a location and an emotion for Doug.
 Doug is off to the side and doesn't talk, but his emotion is influenced by the other two people.

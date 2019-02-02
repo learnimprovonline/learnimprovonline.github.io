@@ -10,8 +10,9 @@ source: "Ashley Osborn"
 date: 2015-12-14
 minimumPeople: 1
 duration: 10
-durationType: constant
+durationType: Constant
 ---
+
 Three person scene which begins with a suggestion of a place where people might be waiting in a line.
 Requires a line of at least six chairs.
 Short thirty second scenes between characters sitting in line.

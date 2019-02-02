@@ -7,8 +7,9 @@ source: "Laura Irwin"
 date: 2015-11-30
 minimumPeople: 2
 duration: 5
-durationType: constant
+durationType: Constant
 ---
+
 {{ Circle Up }}
 Everyone will be clapping in rhythm with your neighbor's hands as well as your own, fairly slow at first but after each full round increase the speed.
 

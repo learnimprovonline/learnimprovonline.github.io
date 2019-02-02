@@ -8,7 +8,7 @@ source: "Michael Hudgens"
 date: 2016-05-16
 minimumPeople: 3
 duration: 3
-durationType: constant
+durationType: Constant
 ---
 
 {{ Circle Up }}

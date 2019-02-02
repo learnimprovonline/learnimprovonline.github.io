@@ -9,9 +9,10 @@ source: "Laura Irwin"
 date: 2015-11-30
 minimumPeople: 3
 duration: 10
-durationType: step
-peoplePerScene: 4
+durationType: Step
+peoplePerScene: 3
 ---
+
 Three to five people sit in a line of chairs with the lights off and their eyes closed.
 The name of a town is chosen by suggestion.
 These people will be playing a set of dead people who used to live in the town.

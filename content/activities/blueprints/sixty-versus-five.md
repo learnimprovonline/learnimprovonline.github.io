@@ -7,8 +7,9 @@ source: "Keith Curtis"
 date: 2015-08-18
 minimumPeople: 2
 duration: 3
-durationType: linear
+durationType: Linear
 ---
+
 Perform a series of two person scenes in sixty seconds.
 Now perform a series of two person scenes in five seconds.
 What is different about those two scenes?

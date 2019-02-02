@@ -1,23 +1,23 @@
 const replace = require('replace-in-file');
 const conventions = require('./conventions.json');
 
-const from = [];
-const to = [];
+const tokens = [];
+const verbiage = [];
 
 conventions.forEach((convention) => {
   const token = new RegExp(`{{ ${convention.name} }}`, 'g');
-  from.push(token);
-  to.push(convention.verbiage);
+  tokens.push(token);
+  verbiage.push(convention.verbiage);
 });
 
-console.log(from);
+console.log(tokens);
 
-const options = {
+const replaceOptions = {
   files: 'src/data/activities/*.md',
-  from,
-  to,
+  from: tokens,
+  to: verbiage,
 };
 
-const changes = replace.sync(options);
+const changes = replace.sync(replaceOptions);
 
 console.log(changes);

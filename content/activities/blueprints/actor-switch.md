@@ -8,9 +8,10 @@ source: "Bobby McCosky"
 date: 2015-08-04
 minimumPeople: 2
 duration: 4
-durationType: step
+durationType: Step
 peoplePerScene: 2
 ---
+
 Two person scenes where one starts with high status and the other with low status.
 Examples would be doctor/patient or principal/student.
 Any relationship will work as long as the status is distinct.

@@ -7,8 +7,9 @@ source: "Keith Curtis"
 date: 2015-08-18
 minimumPeople: 3
 duration: 8
-durationType: linear
+durationType: Linear
 ---
+
 Group splits into equal parts On and equal parts Off.
 Each person Off chooses a person On to watch during the exercise.
 The people On rotate through two person scenes until roughly half the possible combinations have been completed.

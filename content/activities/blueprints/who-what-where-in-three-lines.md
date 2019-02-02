@@ -7,8 +7,9 @@ source: "Bobby McCosky"
 date: 2015-08-04
 minimumPeople: 2
 duration: 2
-durationType: linear
+durationType: Linear
 ---
+
 {{ Form Two Lines }}
 
 1. The person from the right line will initiate each scene with a single line.

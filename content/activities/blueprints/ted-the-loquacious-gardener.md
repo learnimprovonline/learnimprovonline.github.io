@@ -4,11 +4,12 @@ type: Exercise
 foci:
   - Character
 source: "Ashley Osborn"
-date:   2015-12-14
+date: 2015-12-14
 minimumPeople: 2
 duration: 4
-durationType: linear
+durationType: Linear
 ---
+
 {{ Circle Up }}
 One person is given three suggestions (in order):
 

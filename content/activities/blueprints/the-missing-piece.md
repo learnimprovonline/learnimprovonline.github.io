@@ -2,12 +2,12 @@
 title: "The Missing Piece"
 type: Exercise
 foci:
-  - ???
+  - Support
 source: "Michael Hudgens"
 date: 2016-05-16
 minimumPeople: 3
 duration: 3
-durationType: linear
+durationType: Linear
 ---
 
 Three person scene with two players on stage and one player off stage.

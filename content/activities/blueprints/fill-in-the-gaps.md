@@ -7,7 +7,7 @@ source: "Michael Hudgens"
 date: 2016-05-16
 minimumPeople: 2
 duration: 3
-durationType: step
+durationType: Step
 peoplePerScene: 2
 ---
 

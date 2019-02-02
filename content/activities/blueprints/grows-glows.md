@@ -7,8 +7,9 @@ source: "Keith Curtis"
 date: 2015-08-18
 minimumPeople: 2
 duration: 1
-durationType: linear
+durationType: Linear
 ---
+
 {{ Circle Up }}
 Tell the person to your left something in improv which he/she:
 
