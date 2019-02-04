@@ -3,9 +3,9 @@ title: "Characters in a Line"
 type: Exercise
 foci:
   - Character
+  - Energy
   - Observation
   - Relationship
-  - Energy
 source: "Ashley Osborn"
 date: 2015-12-14
 minimumPeople: 1

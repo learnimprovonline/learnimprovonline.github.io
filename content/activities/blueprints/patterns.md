@@ -2,8 +2,8 @@
 title: "Patterns"
 type: Warmup
 foci:
-  - Observation
   - Energy
+  - Observation
 source:
   - "Keith Curtis"
   - "Michael Hudgens"

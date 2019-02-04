@@ -3,8 +3,8 @@ title: "Blank-iest Blank"
 type: Exercise
 foci:
   - Character
-  - Straight Man
   - Game
+  - Straight Man
 source: "Chris Stoker"
 date: 2015-08-29
 minimumPeople: 2

@@ -3,8 +3,8 @@ title: "Descriptive Character Jump-start"
 type: Exercise
 foci:
   - Character
-  - Relationship
   - Environment
+  - Relationship
 source: "Laura Irwin"
 date: 2015-11-30
 minimumPeople: 2

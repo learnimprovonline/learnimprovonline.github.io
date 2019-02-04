@@ -4,9 +4,9 @@ type: Exercise
 foci:
   - Character
   - Content
+  - Environment
   - Relationship
   - Straight Man
-  - Environment
 source: "Ashley Osborn"
 date: 2015-12-14
 minimumPeople: 2

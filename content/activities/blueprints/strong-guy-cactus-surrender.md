@@ -2,8 +2,8 @@
 title: "Strong Guy, Cactus, I Surrender!"
 type: Warmup
 foci:
-  - Observation
   - Group Mind
+  - Observation
 source: "Michael Hudgens"
 date: 2016-05-16
 minimumPeople: 3

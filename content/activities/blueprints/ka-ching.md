@@ -2,9 +2,9 @@
 title: "Ka-Ching!"
 type: Warmup
 foci:
+  - Humor
   - Observation
   - Straight Man
-  - Humor
 source:
   - "Jill Gillespie"
   - "Bobby McCosky"

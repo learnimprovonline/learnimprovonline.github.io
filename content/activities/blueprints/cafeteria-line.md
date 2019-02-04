@@ -2,8 +2,8 @@
 title: "Cafeteria Line"
 type: Exercise
 foci:
-  - Observation
   - Heightening
+  - Observation
 source: "Bobby McCosky"
 date: 2015-08-04
 minimumPeople: 2

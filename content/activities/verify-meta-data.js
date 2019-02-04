@@ -15,6 +15,14 @@ function isArrayUnique(array) {
   return isUnique;
 }
 
+function isArraySorted(array) {
+  const sortedArray = [...array];
+  sortedArray.sort();
+  const isSorted = JSON.stringify(array) === JSON.stringify(sortedArray);
+
+  return isSorted;
+}
+
 // TODO: Variable number of people per scene - town gossip
 
 const schema = yup.object().shape({
@@ -26,7 +34,8 @@ const schema = yup.object().shape({
   foci: yup
     .array(yup.string().oneOf(focusNames))
     .required()
-    .test('duplicates', 'focus must not contain duplicates', isArrayUnique),
+    .test('duplicates', 'focus must not contain duplicates', isArrayUnique)
+    .test('sorted', 'focus must be in alphabetical order', isArraySorted),
   source: yup.string(),
   date: yup.date(),
   minimumPeople: yup
@@ -62,9 +71,11 @@ const schema = yup.object().shape({
     }),
 });
 
+let errorCount = 0;
+
 try {
   fs.readdir('content/activities/blueprints', (err, files) => {
-    console.log('# Errors\n');
+    console.log('# Verification\n');
     files.forEach((filename) => {
       const filePath = `content/activities/blueprints/${filename}`;
       const data = fs.readFileSync(filePath, 'utf8');
@@ -72,11 +83,14 @@ try {
       const meta = yaml.safeLoadAll(documents[1], { schema: yaml.JSON_SCHEMA });
 
       schema.validate(meta[0]).catch((validationError) => {
+        errorCount += validationError.errors;
         validationError.errors.forEach((element) => {
           console.log(`${filename}:  ${element}`);
         });
       });
     });
+
+    console.log(`${errorCount} errors`);
   });
 } catch (e) {
   console.log(e);

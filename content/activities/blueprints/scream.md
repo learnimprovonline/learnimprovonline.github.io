@@ -2,8 +2,8 @@
 title: "Scream"
 type: Warmup
 foci:
-  - Group Mind
   - Energy
+  - Group Mind
 source: "Ashley Osborn"
 date: 2015-12-14
 alias:
