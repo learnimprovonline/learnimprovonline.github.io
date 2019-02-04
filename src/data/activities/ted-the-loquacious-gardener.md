@@ -4,11 +4,12 @@ type: Exercise
 foci:
   - Character
 source: "Ashley Osborn"
-date:   2015-12-14
+date: 2015-12-14
 minimumPeople: 2
 duration: 4
-durationType: linear
+durationType: Linear
 ---
+
 Players to stand in a circle with the order randomized using whatever method you prefer.
 One person is given three suggestions (in order):
 

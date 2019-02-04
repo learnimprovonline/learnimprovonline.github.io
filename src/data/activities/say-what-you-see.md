@@ -9,9 +9,10 @@ source: "Chris Stoker"
 date: 2015-08-29
 minimumPeople: 2
 duration: 10
-durationType: linear
+durationType: Linear
 ---
-Players form two lines of equal length. Mix it up so players are not across from someone they've done senes with already.
+
+Players form two lines of equal length. Mix it up so players are not across from someone they've done scenes with already.
 Two person scene starts with the following sequence steps:
 
 1. Person #1 starts the scene with an action/activity.

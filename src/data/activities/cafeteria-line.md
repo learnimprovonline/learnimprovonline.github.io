@@ -8,14 +8,15 @@ source: "Bobby McCosky"
 date: 2015-08-04
 minimumPeople: 2
 duration: 1
-durationType: linear
+durationType: Linear
 ---
+
 Players form into a single line.
 Optionally, a suggestion of a type of restaurant can be given.
 First player will create a character to go through a cafeteria line and order food.
 At the start of the cafeteria line, the character will make a comment through their point of view.
 The comment will likely be about how the character is feeling or thinking.
-The character then orders three normal, every-day food items (in order) as he/she moves down the cafeteria line:
+The character then orders three normal, every-day food items (in order) as he/she moves down the cafeteria line.
 
 1. Drink
 2. Entrée

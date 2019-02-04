@@ -11,7 +11,7 @@ source:
 date: 2019-01-05
 minimumPeople: 3
 duration: 1
-durationType: "linear"
+durationType: Linear
 ---
 
 Players to stand in a circle with the order randomized using whatever method you prefer.

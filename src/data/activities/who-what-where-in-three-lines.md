@@ -7,9 +7,10 @@ source: "Bobby McCosky"
 date: 2015-08-04
 minimumPeople: 2
 duration: 2
-durationType: linear
+durationType: Linear
 ---
-Players form two lines of equal length. Mix it up so players are not across from someone they've done senes with already.
+
+Players form two lines of equal length. Mix it up so players are not across from someone they've done scenes with already.
 
 1. The person from the right line will initiate each scene with a single line.
 2. The left person will respond with a single line.

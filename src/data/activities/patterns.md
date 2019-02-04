@@ -10,8 +10,9 @@ source:
 date: 2015-08-18
 minimumPeople: 3
 duration: 5
-durationType: constant
+durationType: Constant
 ---
+
 Players to stand in a circle with the order randomized using whatever method you prefer.
 Start by creating a set of linked identifiers following a theme (i.e. numbers, colors, animals, etc.).
 To do this, point at a person who hasn't been pointed at yet and say something in line with the theme which has been created.

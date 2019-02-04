@@ -7,8 +7,9 @@ source: "Keith Curtis"
 date: 2015-08-18
 minimumPeople: 2
 duration: 1
-durationType: linear
+durationType: Linear
 ---
+
 Players to stand in a circle with the order randomized using whatever method you prefer.
 Tell the person to your left something in improv which he/she:
 

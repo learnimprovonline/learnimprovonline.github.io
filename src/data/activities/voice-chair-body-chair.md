@@ -7,8 +7,9 @@ source: "Keith Curtis"
 date: 2015-08-18
 minimumPeople: 3
 duration: 4
-durationType: linear
+durationType: Linear
 ---
+
 Two person scene with both people sitting in chairs.
 The person in the right chair and starts with a character whose voice is inspired by a suggestion.
 The person in the left chair starts with a character inspired by a body position.

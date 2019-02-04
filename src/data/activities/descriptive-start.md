@@ -9,9 +9,10 @@ source: "Laura Irwin"
 date: 2015-11-30
 minimumPeople: 2
 duration: 4
-durationType: step
+durationType: Step
 peoplePerScene: 2
 ---
+
 Two person scene where each person describes every physical aspect of the other person from the shoes up.
 Character's descriptions don't need to be based off one another.
 Each person then gives the name, occupation, and a short description of their character based on the description given to them.

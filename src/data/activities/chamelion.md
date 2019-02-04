@@ -8,9 +8,10 @@ source: "Chris Stoker"
 date: 2015-08-29
 minimumPeople: 2
 duration: 5
-durationType: linear
+durationType: Linear
 ---
-Players form two lines of equal length. Mix it up so players are not across from someone they've done senes with already.
+
+Players form two lines of equal length. Mix it up so players are not across from someone they've done scenes with already.
 Two person scene where one person initiates the scene and the second person mimics the actions and voice of the person who initiated.
 Then the scene progresses with the chameleon duplicating the type of character the other is doing.
 This includes the opinions and world views.
