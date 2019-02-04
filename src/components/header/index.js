@@ -35,12 +35,6 @@ const Header = ({ children, handleSearch }) => (
           <Link className="nav-item nav-link" to="/activities">
             Activities
           </Link>
-          <Link className="nav-item nav-link" to="/faq">
-            FAQ
-          </Link>
-          <Link className="nav-item nav-link" to="/contact">
-            Contact
-          </Link>
         </div>
         <form onSubmit={handleSubmit} className="form-inline">
           <input
