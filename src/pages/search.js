@@ -5,6 +5,8 @@ import bootstrap from 'bootstrap';
 import { Index } from 'elasticlunr';
 import { graphql } from 'graphql';
 
+import './_search.scss';
+
 export const searchQuery = graphql`
   query ActivitySearchIndexQuery {
     siteSearchIndex {
@@ -77,7 +79,7 @@ class SearchPage extends React.Component {
 
     return (
       <div className="container">
-        <form>
+        <form className="searchForm">
           <h1>Search</h1>
           <input
             type="text"
