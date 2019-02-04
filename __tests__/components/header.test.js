@@ -73,7 +73,7 @@ describe('Header', () => {
       });
 
       test('has three navigation items', () => {
-        expect(navigationItems).toHaveLength(3);
+        expect(navigationItems).toHaveLength(1);
       });
 
       describe('Activities', () => {
@@ -90,40 +90,6 @@ describe('Header', () => {
           const linkText = activitiesLink.children().text();
 
           expect(linkText).toEqual('Activities');
-        });
-      });
-
-      describe('FAQ', () => {
-        const faqLink = navigationItems.at(1);
-
-        test('link goes to FAQ page', () => {
-          const faqPageDestination = '/faq';
-          const linkDestination = faqLink.prop('to');
-
-          expect(faqLink.type()).toEqual(Link);
-          expect(linkDestination).toEqual(faqPageDestination);
-        });
-        test('display text is "FAQ"', () => {
-          const linkText = faqLink.children().text();
-
-          expect(linkText).toEqual('FAQ');
-        });
-      });
-
-      describe('Contact', () => {
-        const contactLink = navigationItems.at(2);
-
-        test('link goes to Contact page', () => {
-          const contactPageDestination = '/contact';
-          const linkDestination = contactLink.prop('to');
-
-          expect(contactLink.type()).toEqual(Link);
-          expect(linkDestination).toEqual(contactPageDestination);
-        });
-        test('display text is "Contact"', () => {
-          const linkText = contactLink.children().text();
-
-          expect(linkText).toEqual('Contact');
         });
       });
     });
